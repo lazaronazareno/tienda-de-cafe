@@ -77,60 +77,6 @@
     flex-direction: column;
 }
 
-.form-group label {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #8b4513;
-    margin-bottom: 8px;
-    font-family: 'Oranienbaum Static', 'Amarante', cursive;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 15px 20px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #8b4513;
-    background-color: white;
-    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.btn-enviar {
-    background-color: #8b4513;
-    color: white;
-    padding: 18px 40px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Amarante', cursive;
-    margin-top: 10px;
-}
-
-.btn-enviar:hover {
-    background-color: #654321;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
-}
-
 .contacto-info {
     display: flex;
     flex-direction: column;

@@ -101,44 +101,6 @@ body:not(.locales-page) .locales-main {
     font-family: 'Oranienbaum Static', 'Amarante', cursive;
 }
 
-.search-form {
-    display: flex;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.search-input {
-    flex: 1;
-    padding: 15px 20px;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.search-input:focus {
-    border-color: #8b4513;
-}
-
-.search-btn {
-    background-color: #8b4513;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.search-btn:hover {
-    background-color: #654321;
-    transform: translateY(-2px);
-}
-
 /* Map Section */
 .locales-map-section {
     margin-bottom: 80px;
@@ -263,39 +225,6 @@ body:not(.locales-page) .locales-main {
     gap: 15px;
 }
 
-.btn-directions,
-.btn-call {
-    flex: 1;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.btn-directions {
-    background-color: #8b4513;
-    color: white;
-}
-
-.btn-directions:hover {
-    background-color: #654321;
-    transform: translateY(-2px);
-}
-
-.btn-call {
-    background-color: transparent;
-    color: #8b4513;
-    border: 2px solid #8b4513;
-}
-
-.btn-call:hover {
-    background-color: #8b4513;
-    color: white;
-}
-
 /* Info Section */
 .locales-info {
     margin-bottom: 40px;
@@ -344,15 +273,7 @@ body:not(.locales-page) .locales-main {
     font-size: 0.95rem;
 }
 
-/* Estilos específicos para navbar en página de locales */
-.locales-page .header {
-    background-color: #1a1a1a !important;
-    border-bottom: 1px solid #444;
-}
 
-.locales-page .nav-link {
-    color: #e0e0e0 !important;
-}
 
 .locales-page .nav-link:hover,
 .locales-page .nav-link.active {
@@ -507,11 +428,6 @@ body:not(.locales-page) .locales-main {
 
     .locales-subtitle {
         font-size: 1.1rem;
-    }
-
-    .search-form {
-        flex-direction: column;
-        gap: 15px;
     }
 
     .map-container {
