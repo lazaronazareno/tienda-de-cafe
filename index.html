@@ -16,42 +16,31 @@
     <!-- Header -->
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <a href="index.html" class="nav-link active">
-            <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
-          </a>
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <div class="logo">
+            <a href="index.html" class="nav-link active">
+              <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+            </a>
+          </div>
         </div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li>
-              <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
-            </li>
-            <li>
-              <a href="tutoriales.html" class="nav-link">Tutoriales</a>
-            </li>
-            <li>
-              <a href="locales.html" class="nav-link">Locales</a>
-            </li>
-            <li>
-              <a href="menu.html" class="nav-link">Nuestro Menú</a>
-            </li>
-            <li>
-              <a href="trabaja-con-nosotros.html" class="nav-link"
-                >Trabajá en TDC</a
-              >
-            </li>
-            <li>
-              <a href="franquicias.html" class="nav-link">Franquicias</a>
-            </li>
-            <li>
-              <a href="contacto.html" class="nav-link">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div class="nav-links">
+          <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
+          <a href="tutoriales.html" class="nav-link">Tutoriales</a>
+          <a href="locales.html" class="nav-link">Locales</a>
+          <a href="menu.html" class="nav-link">Nuestro Menú</a>
+          <a href="trabaja-con-nosotros.html" class="nav-link"
+            >Trabajá en TDC</a
+          >
+          <a href="franquicias.html" class="nav-link">Franquicias</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
         </div>
       </div>
     </header>
@@ -78,7 +67,8 @@
 
         <div id="slide-2" class="hero-slide">
           <div class="slide-content">
-            <h1>Proba nuestras CÁPSULAS</h1>
+            <h2>Proba nuestras</h2>
+            <h1>CÁPSULAS</h1>
             <p>100% aluminio compatibles con máquinas Nespresso*</p>
             <a href="nuestro-cafe.html" class="btn-primary">DESCUBRILAS</a>
           </div>
@@ -91,9 +81,9 @@
 
         <div id="slide-3" class="hero-slide">
           <div class="slide-content">
-            <h1>Desde 2007 TOSTANDO TU CAFÉ</h1>
+            <h2>Desde 2007</h2>
+            <h1>TOSTANDO TU CAFÉ</h1>
             <p>Años de experiencia cuidando cada paso del proceso.</p>
-            <a href="nuestro-cafe.html" class="btn-primary">CONOCÉ MÁS</a>
           </div>
           <img
             src="images/hero-tostado.jpg"
@@ -112,65 +102,121 @@
     <!-- Nuestros Productos Section -->
     <section class="productos">
       <div class="container">
-        <h2>NUESTROS PRODUCTOS</h2>
-        <div class="productos-slider">
-          <div class="producto-card">
-            <img src="images/cafe-descafeinado.jpg" alt="Café Descafeinado" />
-            <h3>Café Descafeinado</h3>
-            <p>Molido o en Grano</p>
+        <h2 class="subtitle">NUESTROS PRODUCTOS</h2>
+        <div class="slider">
+          <div class="slides">
+            <!-- Grupo 1: Primeros 5 productos -->
+            <div id="productos-slide-1" class="productos-slide">
+              <div class="producto-card">
+                <img
+                  src="images/products_Brasil.jpg"
+                  alt="Café Brasil"
+                  data-hover="images/products_Brasil_frente.jpg"
+                />
+                <h3>Café Brasil</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/products_Barista.jpg"
+                  alt="Café Barista"
+                  data-hover="images/products_Barista_frente.jpg"
+                />
+                <h3>Café Barista</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/products_minka.jpg"
+                  alt="Café Minka"
+                  data-hover="images/products_minka_frente.jpg"
+                />
+                <h3>Café Minka</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/products_Colombia.jpg"
+                  alt="Café Colombia"
+                  data-hover="images/products_Colombia_frente.jpg"
+                />
+                <h3>Café Colombia</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/products_scegliere.jpg"
+                  alt="Café Scegliere"
+                  data-hover="images/products_scegliere_frente.jpg"
+                />
+                <h3>Café Scegliere</h3>
+              </div>
+            </div>
+
+            <!-- Grupo 2: Segundos 5 productos -->
+            <div id="productos-slide-2" class="productos-slide">
+              <div class="producto-card">
+                <img
+                  src="images/products_descaf.jpg"
+                  alt="Café Descafeinado"
+                  data-hover="images/products_descaf_frente.jpg"
+                />
+                <h3>Café Descafeinado</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/capsulas_taza_barista.jpg"
+                  alt="Cápsulas Barista"
+                />
+                <h3>Cápsulas de Café Barista</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/capsulas_taza_scegliere.jpg"
+                  alt="Cápsulas Scegliere"
+                />
+                <h3>Cápsulas de Café Scegliere</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/capsulas_taza_colombia.jpg"
+                  alt="Cápsulas Colombia"
+                />
+                <h3>Cápsulas de Café Colombia</h3>
+              </div>
+              <div class="producto-card">
+                <img
+                  src="images/capsulas_taza_minka.jpg"
+                  alt="Cápsulas Minka"
+                />
+                <h3>Cápsulas de Café Minka</h3>
+              </div>
+            </div>
           </div>
 
-          <div class="producto-card">
-            <img src="images/capsulas-barista.jpg" alt="Cápsulas Barista" />
-            <h3>Cápsulas de Café Barista</h3>
-            <p>Compatible con Nespresso</p>
-          </div>
-
-          <div class="producto-card">
-            <img src="images/capsulas-scegliere.jpg" alt="Cápsulas Scegliere" />
-            <h3>Cápsulas de Café Scegliere</h3>
-            <p>Compatible con Nespresso</p>
-          </div>
-
-          <div class="producto-card">
-            <img src="images/capsulas-colombia.jpg" alt="Cápsulas Colombia" />
-            <h3>Cápsulas de Café Colombia</h3>
-            <p>Compatible con Nespresso</p>
-          </div>
-
-          <div class="producto-card">
-            <img src="images/capsulas-minka.jpg" alt="Cápsulas Minka" />
-            <h3>Cápsulas de Café Minka</h3>
-            <p>Compatible con Nespresso</p>
-          </div>
-
-          <div class="producto-card">
-            <img src="images/cafe-brasil.jpg" alt="Café Brasil" />
-            <h3>Café Brasil</h3>
-            <p>Molido o en Grano</p>
+          <!-- Controles de navegación -->
+          <div class="slider-controls">
+            <a href="#productos-slide-1">1</a>
+            <a href="#productos-slide-2">2</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sección con dos imágenes -->
+    <!-- Sección destacados -->
     <section class="destacados">
       <div class="container">
-        <div class="destacados-grid">
+        <div class="destacados-container">
           <div class="destacado-item">
-            <img src="images/secretos-barista.jpg" alt="Secretos del Barista" />
+            <img src="images/banner_barista.jpg" alt="Secretos del Barista" />
             <div class="destacado-content">
-              <h3>SECRETOS DEL BARISTA</h3>
               <p>Aprendé a hacer tu café como un experto</p>
+              <h3 class="subtitle">SECRETOS DEL BARISTA</h3>
               <a href="tutoriales.html" class="btn-secondary">VER</a>
             </div>
           </div>
 
           <div class="destacado-item">
-            <img src="images/nuestros-platos.jpg" alt="Nuestros Platos" />
+            <img src="images/banner_menu.jpg" alt="Nuestros Platos" />
             <div class="destacado-content">
-              <h3>NUESTROS PLATOS</h3>
               <p>Conocé todo lo que podés encontrar en nuestros locales</p>
+              <h3 class="subtitle">NUESTROS PLATOS</h3>
               <a href="menu.html" class="btn-secondary">VER</a>
             </div>
           </div>
@@ -182,16 +228,13 @@
     <section class="nuestro-cafe">
       <div class="container">
         <div class="cafe-header">
-          <h2>NUESTRO CAFÉ</h2>
-          <h3>¿CUÁL VAS A ELEGIR HOY?</h3>
+          <h3 class="subtitle">NUESTRO CAFÉ</h3>
+          <h2 class="title">¿CUÁL VAS A ELEGIR HOY?</h2>
         </div>
 
-        <div class="cafe-grid">
-          <div class="cafe-item">
-            <div class="cafe-image">
-              <img src="images/cafe-barista.jpg" alt="Café Barista" />
-            </div>
-            <div class="cafe-content">
+        <div class="cafe-container">
+          <div class="cafe-item-container">
+            <div class="cafe-item">
               <h4>BARISTA</h4>
               <p>
                 Nuestro tradicional house blend, el hijo prodigio de la casa.
@@ -200,13 +243,8 @@
                 en tu casa, te vas a sentir bien cerca de TIENDA.
               </p>
             </div>
-          </div>
 
-          <div class="cafe-item">
-            <div class="cafe-image">
-              <img src="images/cafe-scegliere.jpg" alt="Café Scegliere" />
-            </div>
-            <div class="cafe-content">
+            <div class="cafe-item">
               <h4>SCEGLIERE</h4>
               <p>
                 Una combinación única, lograda por la combinación de tres
@@ -215,13 +253,8 @@
                 complejo.
               </p>
             </div>
-          </div>
 
-          <div class="cafe-item">
-            <div class="cafe-image">
-              <img src="images/cafe-minka.jpg" alt="Café Minka" />
-            </div>
-            <div class="cafe-content">
+            <div class="cafe-item">
               <h4>MINKA</h4>
               <p>
                 Este blend nos regala un café de gran cuerpo, con un sabor
@@ -231,11 +264,10 @@
             </div>
           </div>
 
-          <div class="cafe-item">
-            <div class="cafe-image">
-              <img src="images/cafe-colombia.jpg" alt="Café Colombia" />
-            </div>
-            <div class="cafe-content">
+          <img src="/images//nuestrocafe.jpg" alt="Nuestro Cafe" />
+
+          <div class="cafe-item-container">
+            <div class="cafe-item">
               <h4>COLOMBIA</h4>
               <p>
                 Nuestro varietal clásico. Adentrate en las regiones colombianas
@@ -243,16 +275,8 @@
                 delicada acidez. Inconfundible.
               </p>
             </div>
-          </div>
 
-          <div class="cafe-item">
-            <div class="cafe-image">
-              <img
-                src="images/cafe-descafeinado-detail.jpg"
-                alt="Café Descafeinado"
-              />
-            </div>
-            <div class="cafe-content">
+            <div class="cafe-item">
               <h4>DESCAFEINADO</h4>
               <p>
                 Si querés disfrutar un exquisito café, pero reducir tu dosis
@@ -262,13 +286,8 @@
                 cafeína.
               </p>
             </div>
-          </div>
 
-          <div class="cafe-item">
-            <div class="cafe-image">
-              <img src="images/cafe-brasil-detail.jpg" alt="Café Brasil" />
-            </div>
-            <div class="cafe-content">
+            <div class="cafe-item">
               <h4>BRASIL</h4>
               <p>
                 Un café de cuerpo suave, y baja acidez hacen de BRASIL el ideal
@@ -281,30 +300,16 @@
     </section>
 
     <!-- Sección de Locales -->
-    <section class="locales-cta">
-      <div class="container">
-        <div class="locales-content">
-          <h2>SIEMPRE HAY UN</h2>
-          <h3>TIENDA CERCA TUYO</h3>
-          <p>Encontrá nuestra sucursal más cercana.</p>
-          <a href="locales.html" class="btn-primary">INGRESAR</a>
-        </div>
-        <div class="locales-image">
-          <img src="images/tienda-logo.png" alt="Tienda de Café" />
-        </div>
+    <section class="locales">
+      <div class="locales-content">
+        <h3 class="subtitle">SIEMPRE HAY UN</h3>
+        <h2 class="title">TIENDA DE CAFE</h2>
+        <h3 class="subtitle">CERCA TUYO</h3>
+        <p>Encontrá nuestra sucursal más cercana.</p>
+        <a href="locales.html" class="btn-primary">INGRESAR</a>
       </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <section class="contacto">
-      <div class="container">
-        <div class="contacto-content">
-          <h2>¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h2>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Tu email" required />
-            <button type="submit" class="btn-primary">SUSCRIBIRME</button>
-          </form>
-        </div>
+      <div class="locales-image">
+        <img src="images/home-tienda.jpg" alt="Tienda de Café" />
       </div>
     </section>
 
@@ -312,6 +317,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
+          <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+
           <div class="footer-section">
             <h4>CONTENIDOS</h4>
             <ul>
@@ -333,17 +340,19 @@
           </div>
 
           <div class="footer-section">
-            <h4>CONECTATE CON NOSOTROS</h4>
-            <div class="social-links">
-              <a href="#" class="social-link">Facebook</a>
-              <a href="#" class="social-link">Instagram</a>
-            </div>
+            <h4>¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h4>
+            <form class="newsletter-form">
+              <input type="text" placeholder="Tu nombre" />
+              <input type="email" placeholder="Tu email" />
+              <button type="button" class="btn-secondary">SUSCRIBIRME</button>
+            </form>
           </div>
         </div>
 
         <div class="footer-bottom">
           <p>
-            © Copyright 2021 Tienda de café - Todos los derechos reservados.
+            © Copyright 2025 Tienda de café - IFTS16 - Todos los derechos
+            reservados.
           </p>
           <p>
             Todos los logos, productos, marcas y nombres aquí utilizados son
