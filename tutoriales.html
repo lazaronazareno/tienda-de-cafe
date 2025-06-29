@@ -3,8 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aprende a preparar el café perfecto con nuestros tutoriales paso a paso. Métodos de espresso, V60, prensa francesa, chemex y más.">
+    <meta name="keywords" content="tutoriales café, preparación café, espresso, V60, prensa francesa, chemex, aeropress, moka">
+    <meta name="author" content="Tienda de Café">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tiendadecafe.com/tutoriales.html">
+    <meta property="og:title" content="Tutoriales de Café - Aprende a preparar el café perfecto">
+    <meta property="og:description" content="Descubre los secretos de la preparación de café con nuestros tutoriales detallados paso a paso.">
+    <meta property="og:image" content="https://tiendadecafe.com/images/tutoriales-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tiendadecafe.com/tutoriales.html">
+    <meta property="twitter:title" content="Tutoriales de Café - Aprende a preparar el café perfecto">
+    <meta property="twitter:description" content="Descubre los secretos de la preparación de café con nuestros tutoriales detallados paso a paso.">
+    <meta property="twitter:image" content="https://tiendadecafe.com/images/tutoriales-og.jpg">
+    
+    <!-- Favicons modernos -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preload crítico -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/tutoriales.css" as="style">
+    
     <title>Tutoriales - Tienda de Café</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tutoriales.css" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Tutoriales de Preparación de Café",
+      "description": "Aprende a preparar diferentes tipos de café con nuestros tutoriales paso a paso",
+      "image": "https://tiendadecafe.com/images/tutoriales-hero.jpg",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "ARS",
+        "value": "0"
+      },
+      "totalTime": "PT5M",
+      "recipeYield": "1",
+      "recipeCategory": "Bebida",
+      "recipeCuisine": "Internacional"
+    }
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -41,23 +89,616 @@
       </div>
     </header>
 
-    <!-- Contenido principal (placeholder) -->
-    <main
-      style="
-        margin-top: 80px;
-        min-height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <div class="container">
-        <h1 style="text-align: center; color: #8b4513">Tutoriales</h1>
-        <p style="text-align: center; color: #666; margin-top: 20px">
-          Contenido próximamente...
-        </p>
-      </div>
+    <!-- Contenido principal -->
+    <main class="tutoriales-main">
+      <!-- Hero Section -->
+      <section class="tutoriales-hero">
+        <div class="tutoriales-hero-content">
+          <h1 class="tutoriales-title">Tutoriales</h1>
+          <p class="tutoriales-subtitle">Aprende a preparar el café perfecto</p>
+        </div>
+      </section>
+
+      <!-- Intro Section -->
+      <section class="tutoriales-intro">
+        <div class="container">
+          <div class="intro-text">
+            Nuestra intención es que estas guías sirvan como punto de partida. El sabor de la taza puede ser modificado por el molinillo que utilices, el café que elijas y por supuesto el agua.<br><br>
+            Cada cafetera o máquina es diferente, por lo cual se deben tomar estos parámetros como pautas, no como leyes absolutas.
+          </div>
+          
+          <div class="intro-text">
+            Cuando revises nuestras guías de elaboración, verás que utilizamos grs al hablar de la cantidad de agua. No es un error. Para nuestras recetas equiparamos mililitros con gramos a fin de facilitar el pesado en la preparación.
+          </div>
+
+          <div class="intro-tips">
+            <em>Pequeños tips</em><br>
+            <em>Cuanto mayor es el tiempo de extracción más grueso se debe moler el café.</em><br>
+            <em>Cuanto mayor es la temperatura del agua, más rápido se infusiona el café.</em>
+          </div>
+
+          <div class="intro-highlight">
+            <strong>Ahora sí, ¡a experimentar!</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methods Grid Section -->
+      <section class="tutoriales-methods" aria-labelledby="methods-title">
+        <div class="container">
+          <h2 id="methods-title" class="sr-only">Métodos de preparación</h2>
+          <div class="methods-grid" role="grid">
+            
+            <!-- Espresso -->
+            <article class="method-card" role="gridcell" tabindex="0" 
+                     onclick="openTutorial('espresso')" 
+                     onkeydown="handleCardKeydown(event, 'espresso')"
+                     aria-label="Tutorial método Espresso">
+              <div class="method-image-placeholder" aria-hidden="true">
+                ESPRESSO
+              </div>
+              <div class="method-overlay">
+                <h3 class="method-title">ESPRESSO</h3>
+                <button type="button" class="method-btn" onclick="event.stopPropagation(); openTutorial('espresso')" aria-label="Ver tutorial paso a paso de Espresso">VER PASO A PASO &gt;</button>
+              </div>
+            </article>
+
+            <!-- Prensa Francesa -->
+            <article class="method-card" role="gridcell" tabindex="0" 
+                     onclick="openTutorial('french_press')" 
+                     onkeydown="handleCardKeydown(event, 'french_press')"
+                     aria-label="Tutorial método Prensa Francesa">
+              <div class="method-image-placeholder" aria-hidden="true">
+                PRENSA FRANCESA
+              </div>
+              <div class="method-overlay">
+                <h3 class="method-title">PRENSA FRANCESA</h3>
+                <button type="button" class="method-btn" onclick="event.stopPropagation(); openTutorial('french_press')" aria-label="Ver tutorial paso a paso de Prensa Francesa">VER PASO A PASO &gt;</button>
+              </div>
+            </article>
+
+            <!-- Chemex -->
+            <article class="method-card" role="gridcell" tabindex="0" 
+                     onclick="openTutorial('chemex')" 
+                     onkeydown="handleCardKeydown(event, 'chemex')"
+                     aria-label="Tutorial método Chemex">
+              <div class="method-image-placeholder" aria-hidden="true">
+                CHEMEX
+              </div>
+              <div class="method-overlay">
+                <h3 class="method-title">CHEMEX</h3>
+                <button type="button" class="method-btn" onclick="event.stopPropagation(); openTutorial('chemex')" aria-label="Ver tutorial paso a paso de Chemex">VER PASO A PASO &gt;</button>
+              </div>
+            </article>
+
+            <!-- Aeropress -->
+            <article class="method-card" role="gridcell" tabindex="0" 
+                     onclick="openTutorial('aeropress')" 
+                     onkeydown="handleCardKeydown(event, 'aeropress')"
+                     aria-label="Tutorial método AeroPress">
+              <div class="method-image-placeholder" aria-hidden="true">
+                AEROPRESS
+              </div>
+              <div class="method-overlay">
+                <h3 class="method-title">AEROPRESS</h3>
+                <button type="button" class="method-btn" onclick="event.stopPropagation(); openTutorial('aeropress')" aria-label="Ver tutorial paso a paso de AeroPress">VER PASO A PASO &gt;</button>
+              </div>
+            </article>
+
+            <!-- Moka -->
+            <article class="method-card" role="gridcell" tabindex="0" 
+                     onclick="openTutorial('moka')" 
+                     onkeydown="handleCardKeydown(event, 'moka')"
+                     aria-label="Tutorial método Moka">
+              <div class="method-image-placeholder" aria-hidden="true">
+                MOKA
+              </div>
+              <div class="method-overlay">
+                <h3 class="method-title">MOKA</h3>
+                <button type="button" class="method-btn" onclick="event.stopPropagation(); openTutorial('moka')" aria-label="Ver tutorial paso a paso de Moka">VER PASO A PASO &gt;</button>
+              </div>
+            </article>
+
+            <!-- Filtro de Papel -->
+            <article class="method-card" role="gridcell" tabindex="0" 
+                     onclick="openTutorial('filtro-papel')" 
+                     onkeydown="handleCardKeydown(event, 'filtro-papel')"
+                     aria-label="Tutorial método Filtro de Papel">
+              <div class="method-image-placeholder" aria-hidden="true">
+                FILTRO DE PAPEL
+              </div>
+              <div class="method-overlay">
+                <h3 class="method-title">FILTRO DE PAPEL</h3>
+                <button type="button" class="method-btn" onclick="event.stopPropagation(); openTutorial('filtro-papel')" aria-label="Ver tutorial paso a paso de Filtro de Papel">VER PASO A PASO &gt;</button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Modal Tutorial con elemento nativo <dialog> -->
+    <dialog id="tutorial-modal" class="tutorial-modal">
+      <div class="tutorial-modal-content">
+        <div class="tutorial-modal-header">
+          <button class="tutorial-close" onclick="closeTutorial()" aria-label="Cerrar tutorial">&times;</button>
+        </div>
+        <div class="tutorial-modal-body" id="tutorial-content">
+          <!-- Hero section con mejor semántica -->
+          <header class="modal-hero" id="modal-hero">
+            <hgroup class="hero-content">
+              <h1 id="modal-titulo"></h1>
+            </hgroup>
+          </header>
+          
+          <!-- Receta con elementos semánticos -->
+          <section class="receta-section" aria-labelledby="receta-titulo">
+            <h2 id="receta-titulo">Receta</h2>
+            <dl class="receta-grid" role="list">
+              <div class="receta-item" role="listitem">
+                <dt class="receta-label">Porción:</dt>
+                <dd id="modal-porcion"></dd>
+              </div>
+              <div class="receta-item" role="listitem">
+                <dt class="receta-label">Café:</dt>
+                <dd id="modal-cafe"></dd>
+              </div>
+              <div class="receta-item" role="listitem">
+                <dt class="receta-label">Agua:</dt>
+                <dd id="modal-agua"></dd>
+              </div>
+              <div class="receta-item" role="listitem">
+                <dt class="receta-label">Relación:</dt>
+                <dd id="modal-relacion"></dd>
+              </div>
+              <div class="receta-item" role="listitem">
+                <dt class="receta-label">Molienda:</dt>
+                <dd id="modal-molienda"></dd>
+              </div>
+              <div class="receta-item" role="listitem">
+                <dt class="receta-label">Tiempo:</dt>
+                <dd id="modal-tiempo"></dd>
+              </div>
+            </dl>
+          </section>
+
+          <!-- Pasos con mejor estructura -->
+          <section class="pasos-section" aria-labelledby="pasos-titulo">
+            <h2 id="pasos-titulo">Preparación</h2>
+            <ol id="modal-pasos" class="pasos-list" role="list">
+              <!-- Pasos dinámicos -->
+            </ol>
+          </section>
+
+          <!-- Mensaje final -->
+          <aside class="mensaje-final" role="complementary">
+            <p id="modal-mensaje"></p>
+            <div class="cta-button">
+              <a href="menu.html" class="btn-primary" role="button">Ver nuestro menú</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      // Base de datos expandida de tutoriales
+      const tutorialesData = {
+            espresso: {
+                titulo: "Método Espresso",
+                hero: "img-menu/espresso-hero.jpg",
+                receta: {
+                    porcion: "1 taza",
+                    cafe: "10 gramos",
+                    agua: "40 ml",
+                    relacion: "1:4 g/ml",
+                    molienda: "fina",
+                    tiempo: "1 minuto"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "A moler el café!",
+                        imagen: "img-menu/espresso-paso1.jpg",
+                        descripcion: "Hay que tener en cuenta que si la molienda es muy gruesa el agua pasará demasiado rápido, obteniendo entonces un café de baja extracción con sabores poco definidos, plano/vacío y sin retrogusto. Por el contrario, si se muele demasiado fino se compactará y el agua casi no podrá pasar, dando lugar a un café sobre extraído que resultará amargo, seco, astringente. Un buen molido para espresso debería permitir extraer una taza de café en 25 segundos."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Compactar con el tamper",
+                        imagen: "img-menu/espresso-paso2.jpg",
+                        descripcion: "Una vez molido el café, utilizá el tamper para comprimirlo y que quede homogéneo en el portafiltro. No es necesario presionar increíblemente fuerte, solo lo suficiente para sellar el café de manera uniforme. Podés darle al tamper un giro suave. Esto suavizará o 'pulirá' la base para una extracción homogénea."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Colocar en la cafetera",
+                        imagen: "img-menu/espresso-paso3.jpg",
+                        descripcion: "Colocá el portafiltro en la cafetera. Previo a extraer el café, 'purgar' el grupo permitiendo quitar el agua sobrecalentada. Si seguiste todos los pasos anteriores, a los pocos segundos empezarás a ver las primeras gotas de café."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Observar la extracción",
+                        imagen: "img-menu/espresso-paso4.jpg",
+                        descripcion: "Estas primeras gotas deberán tener un color avellana y una textura como la miel, denominada crema que aparece en la superficie adornando tu café. Al moverla y cortarla con la cuchara, se cierra de nuevo ella misma. Tardarás aproximadamente 25 segundos para obtener el espresso perfecto."
+                    },
+                    {
+                        numero: 5,
+                        titulo: "¡A disfrutar!",
+                        imagen: "img-menu/espresso-paso5.jpg",
+                        descripcion: "Ahora sí ya podemos disfrutar de nuestro café!"
+                    }
+                ],
+                mensaje_final: "Si a pesar de haber seguido estos pasos, no sale como imaginabas, vení a TIENDA que siempre hay un café esperándote!"
+            },
+            v60: {
+                titulo: "Método V60",
+                hero: "img-menu/v60-hero.jpg",
+                receta: {
+                    porcion: "1 taza",
+                    cafe: "22 gramos",
+                    agua: "350 ml",
+                    relacion: "1:16 g/ml",
+                    molienda: "media",
+                    tiempo: "4 minutos"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "Preparar el filtro",
+                        imagen: "img-menu/v60-paso1.jpg",
+                        descripcion: "Coloca el filtro en el V60 y enjuágalo con agua caliente. Esto elimina el sabor a papel y precalienta el dripper."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Moler y agregar el café",
+                        imagen: "img-menu/v60-paso2.jpg",
+                        descripcion: "Muele 22g de café en punto medio. Agrega el café al filtro y haz un pequeño hoyo en el centro."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Primera vertida (bloom)",
+                        imagen: "img-menu/v60-paso3.jpg",
+                        descripcion: "Vierte agua caliente (92-96°C) desde el centro hacia afuera, usando el doble del peso del café en agua. Espera 30-45 segundos."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Vertidas continuas",
+                        imagen: "img-menu/v60-paso4.jpg",
+                        descripcion: "Continúa vertiendo en movimientos circulares desde el centro, manteniendo el nivel de agua constante. Termina en 3:30-4:00 minutos."
+                    }
+                ],
+                mensaje_final: "El V60 te da control total sobre la extracción. ¡Experimenta hasta encontrar tu perfil de sabor ideal!"
+            },
+            french_press: {
+                titulo: "Prensa Francesa",
+                hero: "img-menu/french-press-hero.jpg",
+                receta: {
+                    porcion: "4 tazas",
+                    cafe: "60 gramos",
+                    agua: "900 ml",
+                    relacion: "1:15 g/ml",
+                    molienda: "gruesa",
+                    tiempo: "4 minutos"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "Calentar y moler",
+                        imagen: "img-menu/french-press-paso1.jpg",
+                        descripcion: "Calienta agua a 93°C y muele el café en punto grueso, como sal marina gruesa."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Agregar café y agua",
+                        imagen: "img-menu/french-press-paso2.jpg",
+                        descripcion: "Coloca el café en la prensa y vierte toda el agua. Revuelve suavemente con una cuchara de madera."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Esperar y presionar",
+                        imagen: "img-menu/french-press-paso3.jpg",
+                        descripcion: "Coloca la tapa con el émbolo arriba y espera 4 minutos. Luego presiona lentamente hacia abajo."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Servir inmediatamente",
+                        imagen: "img-menu/french-press-paso4.jpg",
+                        descripcion: "Sirve todo el café inmediatamente para evitar la sobre-extracción."
+                    }
+                ],
+                mensaje_final: "La prensa francesa resalta los aceites naturales del café. ¡Perfect para cafés con cuerpo!"
+            },
+            chemex: {
+                titulo: "Método Chemex",
+                hero: "img-menu/chemex-hero.jpg",
+                receta: {
+                    porcion: "2-3 tazas",
+                    cafe: "42 gramos",
+                    agua: "700 ml",
+                    relacion: "1:17 g/ml",
+                    molienda: "media-gruesa",
+                    tiempo: "5-6 minutos"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "Preparar el filtro",
+                        imagen: "img-menu/chemex-paso1.jpg",
+                        descripcion: "Despliega el filtro Chemex y colócalo en el dripper con el lado de tres capas hacia el pico vertedor. Enjuaga con agua caliente."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Moler y agregar café",
+                        imagen: "img-menu/chemex-paso2.jpg",
+                        descripcion: "Muele el café en punto medio-grueso y colócalo en el filtro. Haz un pequeño crater en el centro del café."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Primera vertida (bloom)",
+                        imagen: "img-menu/chemex-paso3.jpg",
+                        descripcion: "Vierte agua caliente (93°C) desde el centro, usando el doble del peso del café. Espera 45 segundos para el bloom."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Vertidas restantes",
+                        imagen: "img-menu/chemex-paso4.jpg",
+                        descripcion: "Continúa vertiendo en movimientos circulares lentos, manteniendo el nivel de agua constante. El proceso total debe tomar 5-6 minutos."
+                    }
+                ],
+                mensaje_final: "El Chemex produce un café limpio y brillante, perfecto para apreciar los sabores sutiles del café."
+            },
+            aeropress: {
+                titulo: "Método AeroPress",
+                hero: "img-menu/aeropress-hero.jpg",
+                receta: {
+                    porcion: "1 taza",
+                    cafe: "17 gramos",
+                    agua: "250 ml",
+                    relacion: "1:15 g/ml",
+                    molienda: "fina-media",
+                    tiempo: "2 minutos"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "Armar y calentar",
+                        imagen: "img-menu/aeropress-paso1.jpg",
+                        descripcion: "Coloca el filtro en la tapa del AeroPress y enjuaga con agua caliente. Arma el AeroPress en posición estándar."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Agregar café y agua",
+                        imagen: "img-menu/aeropress-paso2.jpg",
+                        descripcion: "Agrega el café molido fino-medio. Vierte agua caliente (85°C) hasta el número 4, revuelve 10 segundos."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Tiempo de contacto",
+                        imagen: "img-menu/aeropress-paso3.jpg",
+                        descripcion: "Coloca el émbolo y espera 1 minuto. El café debe estar en contacto con el agua sin presionar aún."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Presionar suavemente",
+                        imagen: "img-menu/aeropress-paso4.jpg",
+                        descripcion: "Presiona el émbolo lenta y uniformemente durante 30 segundos hasta escuchar el silbido característico."
+                    }
+                ],
+                mensaje_final: "¡El AeroPress es perfecto para experimentar! Prueba diferentes tiempos y temperaturas."
+            },
+            moka: {
+                titulo: "Método Moka",
+                hero: "img-menu/moka-hero.jpg",
+                receta: {
+                    porcion: "3 tazas",
+                    cafe: "18 gramos",
+                    agua: "150 ml",
+                    relacion: "1:8 g/ml",
+                    molienda: "fina",
+                    tiempo: "5-8 minutos"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "Llenar la base",
+                        imagen: "img-menu/moka-paso1.jpg",
+                        descripcion: "Llena la cámara inferior con agua caliente hasta la válvula de seguridad. Usar agua caliente acelera el proceso."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Agregar café",
+                        imagen: "img-menu/moka-paso2.jpg",
+                        descripcion: "Llena el embudo con café molido fino, nivela sin compactar. No debe sobresalir del borde."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Armar y calentar",
+                        imagen: "img-menu/moka-paso3.jpg",
+                        descripcion: "Enrosca la parte superior firmemente. Coloca en fuego medio-bajo y deja la tapa abierta."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Escuchar y servir",
+                        imagen: "img-menu/moka-paso4.jpg",
+                        descripcion: "Cuando escuches el borboteo característico, retira del fuego. Enfría la base con agua fría para detener la extracción."
+                    }
+                ],
+                mensaje_final: "La moka italiana es tradición pura. ¡Un café intenso para empezar el día con energía!"
+            },
+            "filtro-papel": {
+                titulo: "Filtro de Papel",
+                hero: "img-menu/filtro-papel-hero.jpg",
+                receta: {
+                    porcion: "2 tazas",
+                    cafe: "30 gramos",
+                    agua: "500 ml",
+                    relacion: "1:17 g/ml",
+                    molienda: "media",
+                    tiempo: "4-5 minutos"
+                },
+                pasos: [
+                    {
+                        numero: 1,
+                        titulo: "Preparar el filtro",
+                        imagen: "img-menu/filtro-papel-paso1.jpg",
+                        descripcion: "Dobla el filtro de papel siguiendo las líneas marcadas y colócalo en el dripper. Enjuaga con agua caliente."
+                    },
+                    {
+                        numero: 2,
+                        titulo: "Agregar café molido",
+                        imagen: "img-menu/filtro-papel-paso2.jpg",
+                        descripcion: "Coloca el café molido en punto medio en el filtro. Haz un pequeño hoyo en el centro para la primera vertida."
+                    },
+                    {
+                        numero: 3,
+                        titulo: "Bloom y primera vertida",
+                        imagen: "img-menu/filtro-papel-paso3.jpg",
+                        descripcion: "Vierte agua a 92°C en el centro, usando el doble del peso del café. Espera 30-45 segundos para el bloom."
+                    },
+                    {
+                        numero: 4,
+                        titulo: "Vertidas continuas",
+                        imagen: "img-menu/filtro-papel-paso4.jpg",
+                        descripcion: "Continúa vertiendo en movimientos circulares desde el centro hacia afuera, manteniendo un flujo constante."
+                    }
+                ],
+                mensaje_final: "El método más clásico y confiable. ¡Perfecto para comenzar tu aventura en el café de especialidad!"
+            }
+        };
+
+      // Funciones modernizadas
+      function openTutorial(method) {
+        const modal = document.getElementById('tutorial-modal');
+        const data = tutorialesData[method];
+        
+        if (!data) return;
+        
+        // Prevenir scroll del body (fallback para navegadores sin :has())
+        document.body.classList.add('modal-open');
+        
+        // Llenar hero
+        const heroElement = document.getElementById('modal-hero');
+        heroElement.style.backgroundImage = `url('${data.hero}')`;
+        document.getElementById('modal-titulo').textContent = data.titulo;
+        
+        // Llenar receta usando elementos semánticos
+        document.getElementById('modal-porcion').textContent = data.receta.porcion;
+        document.getElementById('modal-cafe').textContent = data.receta.cafe;
+        document.getElementById('modal-agua').textContent = data.receta.agua;
+        document.getElementById('modal-relacion').textContent = data.receta.relacion;
+        document.getElementById('modal-molienda').textContent = data.receta.molienda;
+        document.getElementById('modal-tiempo').textContent = data.receta.tiempo;
+        
+        // Llenar pasos como lista ordenada semántica
+        const pasosContainer = document.getElementById('modal-pasos');
+        let pasosHTML = '';
+        
+        data.pasos.forEach((paso, index) => {
+          pasosHTML += `
+            <li class="paso-item" role="listitem">
+              <div class="paso-content">
+                <figure class="paso-image">
+                  <img src="${paso.imagen}" alt="${paso.titulo}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="paso-image-placeholder" style="display:none;" aria-label="Imagen del paso ${paso.numero}">
+                    PASO ${paso.numero}
+                  </div>
+                </figure>
+                <div class="paso-text">
+                  <h3>${paso.titulo}</h3>
+                  <p>${paso.descripcion}</p>
+                </div>
+              </div>
+              ${index < data.pasos.length - 1 ? '<hr class="paso-separator" aria-hidden="true">' : ''}
+            </li>
+          `;
+        });
+        
+        pasosContainer.innerHTML = pasosHTML;
+        
+        // Llenar mensaje final
+        document.getElementById('modal-mensaje').textContent = data.mensaje_final;
+        
+        // Usar API nativa de dialog
+        modal.showModal();
+        
+        // Focus management para accesibilidad
+        const closeButton = modal.querySelector('.tutorial-close');
+        closeButton.focus();
+      }
+
+      function closeTutorial() {
+        const modal = document.getElementById('tutorial-modal');
+        modal.close();
+        
+        // Restaurar scroll del body
+        document.body.classList.remove('modal-open');
+      }
+
+      // Manejo de teclado para las cards
+      function handleCardKeydown(event, method) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openTutorial(method);
+        }
+      }
+
+      // Event listeners modernos
+      document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('tutorial-modal');
+        
+        // Cerrar con ESC (nativo de dialog)
+        modal.addEventListener('cancel', function(e) {
+          e.preventDefault(); // Prevenir cierre automático
+          closeTutorial();
+        });
+
+        // Cerrar haciendo click en el backdrop
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeTutorial();
+          }
+        });
+
+        // Trap focus dentro del modal cuando está abierto
+        modal.addEventListener('keydown', function(e) {
+          if (e.key === 'Tab') {
+            trapFocus(e, modal);
+          }
+        });
+
+        // Listener adicional para cerrar modal con ESC desde cualquier lugar
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.open) {
+            closeTutorial();
+          }
+        });
+
+        // Asegurar que el modal se cierre si se hace click fuera del contenido
+        modal.addEventListener('click', function(e) {
+          const modalContent = modal.querySelector('.tutorial-modal-content');
+          if (modalContent && !modalContent.contains(e.target)) {
+            closeTutorial();
+          }
+        });
+      });
+
+      // Función para trap focus (accesibilidad)
+      function trapFocus(e, container) {
+        const focusableElements = container.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey && document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
