@@ -1,0 +1,579 @@
+/* Locales */
+
+/* Fondo específico para locales */
+html.locales-page,
+body.locales-page {
+    background-color: #2c2c2c !important;
+    color: #e0e0e0 !important;
+    background-image: none !important;
+    background: #2c2c2c !important;
+}
+
+/* Asegurar que las secciones principales mantengan el fondo */
+.locales-page main,
+.locales-page .main-content,
+.locales-page .container:not(.navbar .container):not(.footer .container) {
+    background: transparent !important;
+}
+
+/* Específicamente para la sección principal de locales */
+.locales-page .locales-main {
+    background: transparent !important;
+}
+
+.locales-main {
+    margin-top: 80px;
+}
+
+/* Solo aplicar el gradiente a las páginas que NO son locales */
+body:not(.locales-page) .locales-main {
+    background: linear-gradient(135deg, #f8f4f0 0%, #fff 100%);
+}
+
+.locales-hero {
+    position: relative;
+    height: 35vh;
+    background: url('../img-menu/nuestroslocales.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.locales-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.locales-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.locales-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Oranienbaum Static', 'Amarante', cursive;
+    letter-spacing: 2px;
+}
+
+.locales-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Playwrite GB J', cursive;
+}
+
+.locales-content {
+    padding: 80px 0;
+}
+
+/* Search Section */
+.locales-search {
+    margin-bottom: 60px;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.search-container h2 {
+    font-size: 1.6rem;
+    color: #8b4513;
+    margin-bottom: 20px;
+    font-family: 'Oranienbaum Static', 'Amarante', cursive;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #8b4513;
+}
+
+.search-btn {
+    background-color: #8b4513;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #654321;
+    transform: translateY(-2px);
+}
+
+/* Map Section */
+.locales-map-section {
+    margin-bottom: 80px;
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(20%) contrast(1.1);
+}
+
+/* Locales Grid */
+.locales-grid {
+    margin-bottom: 80px;
+}
+
+.locales-grid .section-title {
+    color: #cd853f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.locales-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.local-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #8b4513;
+    max-width: 320px;
+}
+
+.local-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    background: white;
+}
+
+.local-info {
+    margin-bottom: 20px;
+}
+
+.local-name {
+    font-size: 1rem !important;
+    color: #8b4513;
+    margin-bottom: 15px;
+    font-family: 'Oranienbaum Static', 'Amarante', cursive;
+    font-weight: 600;
+}
+
+/* Tamaño específico para nombres de locales en página de locales */
+.locales-page .local-name {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    text-align: center;
+}
+
+.local-address,
+.local-hours,
+.local-phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.local-address .icon-location::before {
+    content: "📍";
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.local-hours .icon-clock::before {
+    content: "🕒";
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.local-phone .icon-phone::before {
+    content: "📞";
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.local-services {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.service-tag {
+    background-color: #f0f0f0;
+    color: #8b4513;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.local-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-directions,
+.btn-call {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-directions {
+    background-color: #8b4513;
+    color: white;
+}
+
+.btn-directions:hover {
+    background-color: #654321;
+    transform: translateY(-2px);
+}
+
+.btn-call {
+    background-color: transparent;
+    color: #8b4513;
+    border: 2px solid #8b4513;
+}
+
+.btn-call:hover {
+    background-color: #8b4513;
+    color: white;
+}
+
+/* Info Section */
+.locales-info {
+    margin-bottom: 40px;
+    padding: 40px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    background: white;
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    color: #8b4513;
+    margin-bottom: 12px;
+    font-family: 'Oranienbaum Static', 'Amarante', cursive;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Estilos específicos para navbar en página de locales */
+.locales-page .header {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #444;
+}
+
+.locales-page .nav-link {
+    color: #e0e0e0 !important;
+}
+
+.locales-page .nav-link:hover,
+.locales-page .nav-link.active {
+    color: #cd853f !important;
+}
+
+.locales-page .nav-link.active::after {
+    background-color: #cd853f !important;
+}
+
+.locales-page .hamburger span {
+    background-color: #e0e0e0 !important;
+}
+
+/* Estilos específicos para cards en página de locales */
+.locales-page .local-card {
+    background: rgba(58, 58, 58, 0.95) !important;
+    border-left: 4px solid #cd853f;
+    color: #e0e0e0;
+}
+
+.locales-page .local-card:hover {
+    background: rgba(70, 70, 70, 0.98) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.locales-page .local-name {
+    color: #cd853f !important;
+}
+
+.locales-page .local-address,
+.locales-page .local-hours,
+.locales-page .local-phone {
+    color: #cccccc !important;
+}
+
+.locales-page .service-tag {
+    background-color: rgba(205, 133, 63, 0.2);
+    color: #cd853f;
+}
+
+.locales-page .btn-directions {
+    background-color: #cd853f;
+    color: #1a1a1a;
+}
+
+.locales-page .btn-directions:hover {
+    background-color: #b8762a;
+}
+
+.locales-page .btn-call {
+    color: #cd853f;
+    border-color: #cd853f;
+}
+
+.locales-page .btn-call:hover {
+    background-color: #cd853f;
+    color: #1a1a1a;
+}
+
+/* Estilos para info cards en página de locales */
+.locales-page .info-card {
+    background: rgba(58, 58, 58, 0.95) !important;
+    color: #e0e0e0;
+}
+
+.locales-page .info-card:hover {
+    background: rgba(70, 70, 70, 0.98) !important;
+}
+
+.locales-page .info-card h3 {
+    color: #cd853f !important;
+}
+
+.locales-page .info-card p {
+    color: #cccccc !important;
+}
+
+/* Estilos para search container en página de locales */
+.locales-page .search-container {
+    background: rgba(58, 58, 58, 0.95) !important;
+    color: #e0e0e0;
+}
+
+.locales-page .search-container h2 {
+    color: #cd853f !important;
+}
+
+.locales-page .search-input {
+    background-color: rgba(42, 42, 42, 0.9);
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+.locales-page .search-input:focus {
+    border-color: #cd853f;
+    background-color: rgba(50, 50, 50, 0.95);
+}
+
+.locales-page .search-input::placeholder {
+    color: #999;
+}
+
+.locales-page .search-btn {
+    background-color: #cd853f;
+    color: #1a1a1a;
+}
+
+.locales-page .search-btn:hover {
+    background-color: #b8762a;
+}
+
+/* Estilos para fondo oscuro en locales */
+.locales-page .section-title {
+    color: #cd853f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.locales-page .locales-grid .section-title {
+    color: #cd853f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer para fondo oscuro en locales */
+.locales-page .footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid #444;
+}
+
+.locales-page .footer h4 {
+    color: #cd853f;
+}
+
+.locales-page .footer a {
+    color: #e0e0e0;
+}
+
+.locales-page .footer a:hover {
+    color: #cd853f;
+}
+
+.locales-page .footer-bottom p {
+    color: #bbb;
+}
+
+/* Responsive Design para Locales */
+@media (max-width: 768px) {
+    .locales-title {
+        font-size: 2.5rem;
+    }
+
+    .locales-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .locales-list {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .local-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .local-actions {
+        flex-direction: column;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .info-card {
+        max-width: 100%;
+        padding: 20px 15px;
+    }
+
+    .info-icon {
+        font-size: 2.2rem;
+    }
+
+    .info-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .search-container {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .locales-hero {
+        height: 40vh;
+    }
+
+    .locales-title {
+        font-size: 2rem;
+    }
+
+    .locales-subtitle {
+        font-size: 1rem;
+    }
+
+    .local-card {
+        padding: 15px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}
