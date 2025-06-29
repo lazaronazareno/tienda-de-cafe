@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda de Café - Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -11,24 +17,35 @@
     <header class="header">
       <div class="container">
         <div class="logo">
-          <img src="images/logo.png" alt="Tienda de Café" />
+          <a href="index.html" class="nav-link active">
+            <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+          </a>
         </div>
         <nav class="nav">
           <ul class="nav-list">
-            <li><a href="index.html" class="nav-link active">Inicio</a></li>
             <li>
               <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
             </li>
-            <li><a href="tutoriales.html" class="nav-link">Tutoriales</a></li>
-            <li><a href="locales.html" class="nav-link">Locales</a></li>
-            <li><a href="menu.html" class="nav-link">Nuestro Menú</a></li>
+            <li>
+              <a href="tutoriales.html" class="nav-link">Tutoriales</a>
+            </li>
+            <li>
+              <a href="locales.html" class="nav-link">Locales</a>
+            </li>
+            <li>
+              <a href="menu.html" class="nav-link">Nuestro Menú</a>
+            </li>
             <li>
               <a href="trabaja-con-nosotros.html" class="nav-link"
                 >Trabajá en TDC</a
               >
             </li>
-            <li><a href="franquicias.html" class="nav-link">Franquicias</a></li>
-            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            <li>
+              <a href="franquicias.html" class="nav-link">Franquicias</a>
+            </li>
+            <li>
+              <a href="contacto.html" class="nav-link">Contacto</a>
+            </li>
           </ul>
         </nav>
         <div class="hamburger">
@@ -40,58 +57,57 @@
     </header>
 
     <!-- Hero Section with Slider -->
-    <section class="hero">
-      <!-- Slider Navigation -->
-      <div class="slider-nav">
-        <input type="radio" name="slide" id="slide1" checked />
-        <input type="radio" name="slide" id="slide2" />
-        <input type="radio" name="slide" id="slide3" />
-
-        <div class="hero-slider">
-          <div class="slide">
-            <div class="slide-content">
-              <h1>Proba nuestras CÁPSULAS</h1>
-              <p>100% aluminio compatibles con máquinas Nespresso*</p>
-              <a href="nuestro-cafe.html" class="btn-primary">DESCUBRILAS</a>
-            </div>
-            <div class="slide-image">
-              <img src="images/hero-capsulas.jpg" alt="Cápsulas de café" />
-            </div>
+    <div class="slider">
+      <div class="slides">
+        <div id="slide-1" class="hero-slide">
+          <div class="slide-content">
+            <h2>Tu café preferido</h2>
+            <h1>SIEMPRE CERCA</h1>
+            <p>Blends, varietales, cafés del mundo.</p>
+            <p>
+              Encontrá tu Tienda más cercana y tentate con nuestros sabores.
+            </p>
+            <a href="locales.html" class="btn-primary">ENCONTRANOS</a>
           </div>
-
-          <div class="slide">
-            <div class="slide-content">
-              <h1>Desde 2007 TOSTANDO TU CAFÉ</h1>
-              <p>Años de experiencia cuidando cada paso del proceso.</p>
-              <a href="nuestro-cafe.html" class="btn-primary">CONOCÉ MÁS</a>
-            </div>
-            <div class="slide-image">
-              <img src="images/hero-tostado.jpg" alt="Tostado de café" />
-            </div>
-          </div>
-
-          <div class="slide">
-            <div class="slide-content">
-              <h1>Tu café preferido SIEMPRE CERCA</h1>
-              <p>
-                Blends, varietales, cafés del mundo. Encontrá tu Tienda más
-                cercana y tentate con nuestros sabores.
-              </p>
-              <a href="locales.html" class="btn-primary">ENCONTRANOS</a>
-            </div>
-            <div class="slide-image">
-              <img src="images/hero-locales.jpg" alt="Locales" />
-            </div>
-          </div>
+          <img
+            src="images/hero-locales.jpg"
+            class="slide-image"
+            alt="Locales"
+          />
         </div>
 
-        <div class="slider-dots">
-          <label for="slide1" class="dot"></label>
-          <label for="slide2" class="dot"></label>
-          <label for="slide3" class="dot"></label>
+        <div id="slide-2" class="hero-slide">
+          <div class="slide-content">
+            <h1>Proba nuestras CÁPSULAS</h1>
+            <p>100% aluminio compatibles con máquinas Nespresso*</p>
+            <a href="nuestro-cafe.html" class="btn-primary">DESCUBRILAS</a>
+          </div>
+          <img
+            src="images/hero-capsulas.jpg"
+            class="slide-image"
+            alt="Cápsulas de café"
+          />
+        </div>
+
+        <div id="slide-3" class="hero-slide">
+          <div class="slide-content">
+            <h1>Desde 2007 TOSTANDO TU CAFÉ</h1>
+            <p>Años de experiencia cuidando cada paso del proceso.</p>
+            <a href="nuestro-cafe.html" class="btn-primary">CONOCÉ MÁS</a>
+          </div>
+          <img
+            src="images/hero-tostado.jpg"
+            class="slide-image"
+            alt="Tostado de café"
+          />
         </div>
       </div>
-    </section>
+      <div class="slider-controls">
+        <a href="#slide-1">1</a>
+        <a href="#slide-2">2</a>
+        <a href="#slide-3">3</a>
+      </div>
+    </div>
 
     <!-- Nuestros Productos Section -->
     <section class="productos">
