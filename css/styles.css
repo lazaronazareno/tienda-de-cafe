@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Amarante&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Oranienbaum&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Sevillana&family=Updock&family=Dancing+Script:wght@400..700&family=Pacifico&family=Kalam:wght@300;400;700&family=Caveat:wght@400..700&family=Satisfy&display=swap");
+/* Fuentes del proyecto - Solo 2 fuentes para simplicidad */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* Reset y estilos base */
 * {
@@ -8,13 +9,15 @@
 }
 
 body {
-  font-family: "Oranienbaum Static", "Oranienbaum", "Arial", sans-serif;
-  font-family: "Funnel Sans", sans-serif !important;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
+}
+
+/* Títulos usan Playfair Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
 
 .container {
