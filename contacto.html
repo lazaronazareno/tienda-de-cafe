@@ -1,124 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Tienda de Café</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto - Tienda de Café</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/contacto.css" />
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <a href="index.html" class="nav-link">
-          <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
-        </a>
-      </div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li>
-            <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
-          </li>
-          <li><a href="tutoriales.html" class="nav-link">Tutoriales</a></li>
-          <li><a href="locales.html" class="nav-link">Locales</a></li>
-          <li><a href="menu.html" class="nav-link">Nuestro Menú</a></li>
-          <li>
-            <a href="trabaja-con-nosotros.html" class="nav-link">Trabajá en TDC</a>
-          </li>
-          <li><a href="franquicias.html" class="nav-link">Franquicias</a></li>
-          <li>
-            <a href="contacto.html" class="nav-link active">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </header>
-
-  <!-- Contenido principal -->
-  <main class="contacto-main">
-    <!-- Sección separadora del nav -->
-    <section class="contacto-spacer">
+  <body>
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <h1 class="contacto-title">Comunicate con nosotros</h1>
-        <p class="contacto-subtitle">Estamos aquí para ayudarte con cualquier consulta</p>
-      </div>
-    </section>
-
-    <!-- Formulario de contacto -->
-    <section class="contacto-form-section">
-      <div class="container">
-        <div class="contacto-content">
-          <div class="form-container">
-            <form class="contacto-form" action="#" method="POST">
-              <div class="form-group">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-
-              <div class="form-group">
-                <label for="asunto">Asunto</label>
-                <input type="text" id="asunto" name="asunto" required>
-              </div>
-
-              <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="6" required
-                  placeholder="Escribí tu mensaje aquí..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-enviar">Enviar mensaje</button>
-            </form>
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <div class="logo">
+            <a href="index.html" class="nav-link active">
+              <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+            </a>
           </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div class="nav-links">
+          <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
+          <a href="tutoriales.html" class="nav-link">Tutoriales</a>
+          <a href="locales.html" class="nav-link">Locales</a>
+          <a href="menu.html" class="nav-link">Nuestro Menú</a>
+          <a href="trabaja-con-nosotros.html" class="nav-link"
+            >Trabajá en TDC</a
+          >
+          <a href="franquicias.html" class="nav-link">Franquicias</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+      </div>
+    </header>
 
-          <!-- Información adicional -->
-          <div class="contacto-info">
-            <div class="info-item">
-              <div class="info-icon">📧</div>
-              <h3>Email</h3>
-              <p>info@tiendadecafe.com.ar</p>
+    <!-- Contenido principal -->
+    <main class="contacto-main">
+      <!-- Sección separadora del nav -->
+      <section class="contacto-spacer">
+        <div class="container">
+          <h1 class="contacto-title">Comunicate con nosotros</h1>
+          <p class="contacto-subtitle">
+            Estamos aquí para ayudarte con cualquier consulta
+          </p>
+        </div>
+      </section>
+
+      <!-- Formulario de contacto -->
+      <section class="contacto-form-section">
+        <div class="container">
+          <div class="contacto-content">
+            <div class="form-container">
+              <form class="contacto-form" action="#" method="POST">
+                <div class="form-group">
+                  <label for="nombre">Nombre completo</label>
+                  <input type="text" id="nombre" name="nombre" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="asunto">Asunto</label>
+                  <input type="text" id="asunto" name="asunto" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="6"
+                    required
+                    placeholder="Escribí tu mensaje aquí..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar mensaje</button>
+              </form>
             </div>
 
-            <div class="info-item">
-              <div class="info-icon">📞</div>
-              <h3>Teléfono</h3>
-              <p>+54 11 1234-5678</p>
-            </div>
+            <!-- Información adicional -->
+            <div class="contacto-info">
+              <div class="info-item">
+                <div class="info-icon">📧</div>
+                <h3>Email</h3>
+                <p>info@tiendadecafe.com.ar</p>
+              </div>
 
-            <div class="info-item">
-              <div class="info-icon">📍</div>
-              <h3>Oficina Central</h3>
-              <p>Av. Corrientes 1234<br>Buenos Aires, Argentina</p>
-            </div>
+              <div class="info-item">
+                <div class="info-icon">📞</div>
+                <h3>Teléfono</h3>
+                <p>+54 11 1234-5678</p>
+              </div>
 
-            <div class="info-item">
-              <div class="info-icon">🕒</div>
-              <h3>Horarios de atención</h3>
-              <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <h3>Oficina Central</h3>
+                <p>Av. Corrientes 1234<br />Buenos Aires, Argentina</p>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">🕒</div>
+                <h3>Horarios de atención</h3>
+                <p>Lunes a Viernes: 9:00 - 18:00<br />Sábados: 10:00 - 14:00</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">          <div class="footer-section">
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+
+          <div class="footer-section">
             <h4>CONTENIDOS</h4>
             <ul>
               <li><a href="nuestro-cafe.html">Nuestro Café</a></li>
@@ -127,36 +135,37 @@
             </ul>
           </div>
 
-        <div class="footer-section">
-          <h4>NECESITÁS AYUDA</h4>
-          <ul>
-            <li><a href="tutoriales.html">Tutoriales</a></li>
-            <li><a href="trabaja-con-nosotros.html">Trabajá en TDC</a></li>
-            <li><a href="franquicias.html">Franquicias</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+          <div class="footer-section">
+            <h4>NECESITÁS AYUDA</h4>
+            <ul>
+              <li><a href="tutoriales.html">Tutoriales</a></li>
+              <li><a href="trabaja-con-nosotros.html">Trabajá en TDC</a></li>
+              <li><a href="franquicias.html">Franquicias</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
 
-        <div class="footer-section">
-          <h4>CONECTATE CON NOSOTROS</h4>
-          <div class="social-links">
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Instagram</a>
+          <div class="footer-section">
+            <h4>¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h4>
+            <form class="newsletter-form">
+              <input type="text" placeholder="Tu nombre" />
+              <input type="email" placeholder="Tu email" />
+              <button type="button" class="btn-secondary">SUSCRIBIRME</button>
+            </form>
           </div>
         </div>
-      </div>
 
-      <div class="footer-bottom">
-        <p>
-          © Copyright 2021 Tienda de café - Todos los derechos reservados.
-        </p>
-        <p>
-          Todos los logos, productos, marcas y nombres aquí utilizados son
-          propiedad registrada.
-        </p>
+        <div class="footer-bottom">
+          <p>
+            © Copyright 2025 Tienda de café - IFTS16 - Todos los derechos
+            reservados.
+          </p>
+          <p>
+            Todos los logos, productos, marcas y nombres aquí utilizados son
+            propiedad registrada.
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
