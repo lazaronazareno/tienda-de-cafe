@@ -474,7 +474,7 @@ body:not(.locales-page) .locales-main {
 
 @media (max-width: 480px) {
     .locales-hero {
-        height: 40vh;
+        height: 25vh;
     }
 
     .locales-title {

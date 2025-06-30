@@ -3,56 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Aprende a preparar el café perfecto con nuestros tutoriales paso a paso. Métodos de espresso, V60, prensa francesa, chemex y más.">
-    <meta name="keywords" content="tutoriales café, preparación café, espresso, V60, prensa francesa, chemex, aeropress, moka">
-    <meta name="author" content="Tienda de Café">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tiendadecafe.com/tutoriales.html">
-    <meta property="og:title" content="Tutoriales de Café - Aprende a preparar el café perfecto">
-    <meta property="og:description" content="Descubre los secretos de la preparación de café con nuestros tutoriales detallados paso a paso.">
-    <meta property="og:image" content="https://tiendadecafe.com/images/tutoriales-og.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tiendadecafe.com/tutoriales.html">
-    <meta property="twitter:title" content="Tutoriales de Café - Aprende a preparar el café perfecto">
-    <meta property="twitter:description" content="Descubre los secretos de la preparación de café con nuestros tutoriales detallados paso a paso.">
-    <meta property="twitter:image" content="https://tiendadecafe.com/images/tutoriales-og.jpg">
-    
-    <!-- Favicons modernos -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <!-- Preload crítico -->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="css/tutoriales.css" as="style">
+    <meta name="description" content="Aprende a preparar el café perfecto con nuestros tutoriales paso a paso. Métodos de espresso, prensa francesa, chemex y más.">
     
     <title>Tutoriales - Tienda de Café</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/tutoriales.css" />
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "Tutoriales de Preparación de Café",
-      "description": "Aprende a preparar diferentes tipos de café con nuestros tutoriales paso a paso",
-      "image": "https://tiendadecafe.com/images/tutoriales-hero.jpg",
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "ARS",
-        "value": "0"
-      },
-      "totalTime": "PT5M",
-      "recipeYield": "1",
-      "recipeCategory": "Bebida",
-      "recipeCuisine": "Internacional"
-    }
-    </script>
   </head>
   <body>
     <!-- Header -->
@@ -135,8 +90,10 @@
                      onclick="openTutorial('espresso')" 
                      onkeydown="handleCardKeydown(event, 'espresso')"
                      aria-label="Tutorial método Espresso">
-              <div class="method-image-placeholder" aria-hidden="true">
-                ESPRESSO
+              <div class="method-image">
+                <img src="images/tutoriales/espresso.jpg" alt="Preparación de espresso" loading="lazy" 
+                     onerror="this.style.display='none'; this.parentNode.classList.add('placeholder-fallback');">
+                <div class="method-image-placeholder" aria-hidden="true">ESPRESSO</div>
               </div>
               <div class="method-overlay">
                 <h3 class="method-title">ESPRESSO</h3>
@@ -149,8 +106,10 @@
                      onclick="openTutorial('french_press')" 
                      onkeydown="handleCardKeydown(event, 'french_press')"
                      aria-label="Tutorial método Prensa Francesa">
-              <div class="method-image-placeholder" aria-hidden="true">
-                PRENSA FRANCESA
+              <div class="method-image">
+                <img src="images/tutoriales/prensa-francesa.jpg" alt="Preparación con prensa francesa" loading="lazy" 
+                     onerror="this.style.display='none'; this.parentNode.classList.add('placeholder-fallback');">
+                <div class="method-image-placeholder" aria-hidden="true">PRENSA FRANCESA</div>
               </div>
               <div class="method-overlay">
                 <h3 class="method-title">PRENSA FRANCESA</h3>
@@ -163,8 +122,10 @@
                      onclick="openTutorial('chemex')" 
                      onkeydown="handleCardKeydown(event, 'chemex')"
                      aria-label="Tutorial método Chemex">
-              <div class="method-image-placeholder" aria-hidden="true">
-                CHEMEX
+              <div class="method-image">
+                <img src="images/tutoriales/chemex.jpg" alt="Preparación con Chemex" loading="lazy" 
+                     onerror="this.style.display='none'; this.parentNode.classList.add('placeholder-fallback');">
+                <div class="method-image-placeholder" aria-hidden="true">CHEMEX</div>
               </div>
               <div class="method-overlay">
                 <h3 class="method-title">CHEMEX</h3>
@@ -177,8 +138,10 @@
                      onclick="openTutorial('aeropress')" 
                      onkeydown="handleCardKeydown(event, 'aeropress')"
                      aria-label="Tutorial método AeroPress">
-              <div class="method-image-placeholder" aria-hidden="true">
-                AEROPRESS
+              <div class="method-image">
+                <img src="images/tutoriales/aeropress.jpg" alt="Preparación con AeroPress" loading="lazy" 
+                     onerror="this.style.display='none'; this.parentNode.classList.add('placeholder-fallback');">
+                <div class="method-image-placeholder" aria-hidden="true">AEROPRESS</div>
               </div>
               <div class="method-overlay">
                 <h3 class="method-title">AEROPRESS</h3>
@@ -191,8 +154,10 @@
                      onclick="openTutorial('moka')" 
                      onkeydown="handleCardKeydown(event, 'moka')"
                      aria-label="Tutorial método Moka">
-              <div class="method-image-placeholder" aria-hidden="true">
-                MOKA
+              <div class="method-image">
+                <img src="images/tutoriales/moka.jpg" alt="Preparación con cafetera Moka" loading="lazy" 
+                     onerror="this.style.display='none'; this.parentNode.classList.add('placeholder-fallback');">
+                <div class="method-image-placeholder" aria-hidden="true">MOKA</div>
               </div>
               <div class="method-overlay">
                 <h3 class="method-title">MOKA</h3>
@@ -205,8 +170,10 @@
                      onclick="openTutorial('filtro-papel')" 
                      onkeydown="handleCardKeydown(event, 'filtro-papel')"
                      aria-label="Tutorial método Filtro de Papel">
-              <div class="method-image-placeholder" aria-hidden="true">
-                FILTRO DE PAPEL
+              <div class="method-image">
+                <img src="images/tutoriales/filtro-papel.jpg" alt="Preparación con filtro de papel" loading="lazy" 
+                     onerror="this.style.display='none'; this.parentNode.classList.add('placeholder-fallback');">
+                <div class="method-image-placeholder" aria-hidden="true">FILTRO DE PAPEL</div>
               </div>
               <div class="method-overlay">
                 <h3 class="method-title">FILTRO DE PAPEL</h3>
