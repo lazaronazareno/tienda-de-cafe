@@ -10,7 +10,7 @@
 .franquicias-hero {
   position: relative;
   height: 35vh;
-  background: url('../img-menu/nuestroslocales.jpg') center/cover no-repeat;
+  background: url("../img-menu/nuestroslocales.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 .franquicias-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -41,7 +41,7 @@
   margin-bottom: 15px;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  font-family: 'Oranienbaum Static', 'Amarante', cursive;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
 }
 
@@ -49,7 +49,7 @@
   font-size: 1.1rem;
   opacity: 0.95;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  font-family: 'Playwrite GB J', cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 /* CTA Button in Hero */
@@ -230,7 +230,7 @@
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
-  content: '✓';
+  content: "✓";
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -311,7 +311,7 @@
 }
 
 .success-modal-header {
-  background: linear-gradient(135deg, #8B4513, #A0522D);
+  background: linear-gradient(135deg, #8b4513, #a0522d);
   padding: 10px 20px;
   position: relative;
 }
@@ -330,7 +330,7 @@
 
 .success-close:hover {
   transform: scale(1.1);
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .success-modal-body {
@@ -342,7 +342,7 @@
 .success-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #4CAF50, #45a049);
+  background: linear-gradient(135deg, #4caf50, #45a049);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -355,7 +355,7 @@
 }
 
 .success-modal-body h2 {
-  color: #8B4513;
+  color: #8b4513;
   font-size: 1.8rem;
   margin-bottom: 20px;
   font-weight: 600;
@@ -541,7 +541,7 @@
 
 .modal-icon {
   font-size: 3rem;
-  color: #4CAF50;
+  color: #4caf50;
   margin-bottom: 20px;
 }
 
@@ -570,7 +570,10 @@
 
 /* Animaciones */
 @keyframes bounce {
-  0%, 20%, 60%, 100% {
+  0%,
+  20%,
+  60%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -582,16 +585,20 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-  from { 
+  from {
     opacity: 0;
     transform: translate(-50%, -50%) translateY(-50px) scale(0.9) translateZ(0);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0) scale(1) translateZ(0);
   }
@@ -664,28 +671,30 @@
   .success-modal {
     width: 95%;
   }
-  
+
   .success-modal-body {
     padding: 25px;
   }
-  
+
   .success-icon {
     width: 60px;
     height: 60px;
     font-size: 30px;
   }
-  
+
   .success-modal-body h2 {
     font-size: 1.5rem;
   }
-  
+
   .success-modal-body p {
     font-size: 1rem;
   }
 }
 
 /* Accesibilidad */
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: 2px solid #8b4513;
   outline-offset: 2px;
 }
