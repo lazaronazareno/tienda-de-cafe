@@ -4,57 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trabajá en TDC - Tienda de Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/trabaja-con-nosotros.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <a href="index.html" class="nav-link">
-            <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
-          </a>
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <div class="logo">
+            <a href="index.html" class="nav-link active">
+              <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+            </a>
+          </div>
         </div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li>
-              <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
-            </li>
-            <li><a href="tutoriales.html" class="nav-link">Tutoriales</a></li>
-            <li><a href="locales.html" class="nav-link">Locales</a></li>
-            <li><a href="menu.html" class="nav-link">Nuestro Menú</a></li>
-            <li>
-              <a href="trabaja-con-nosotros.html" class="nav-link active"
-                >Trabajá en TDC</a
-              >
-            </li>
-            <li><a href="franquicias.html" class="nav-link">Franquicias</a></li>
-            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div class="nav-links">
+          <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
+          <a href="tutoriales.html" class="nav-link">Tutoriales</a>
+          <a href="locales.html" class="nav-link">Locales</a>
+          <a href="menu.html" class="nav-link">Nuestro Menú</a>
+          <a href="trabaja-con-nosotros.html" class="nav-link"
+            >Trabajá en TDC</a
+          >
+          <a href="franquicias.html" class="nav-link">Franquicias</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
         </div>
       </div>
     </header>
 
     <!-- Contenido principal (placeholder) -->
-    <main
-      style="
-        margin-top: 80px;
-        min-height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
+    <main>
       <div class="container">
-        <h1 style="text-align: center; color: #8b4513">Trabajá en TDC</h1>
-        <p style="text-align: center; color: #666; margin-top: 20px">
-          Contenido próximamente...
-        </p>
+        <div class="trabaja-con-nosotros-container">
+          <div class="cafe-header">
+            <h3 class="subtitle">SUMATE A NUESTRO EQUIPO</h3>
+            <h2 class="title">TRABAJÁ EN TDC</h2>
+            <p>
+              Si querés formar parte de Tienda de Café envianos tu datos y
+              adjunta tu CV
+            </p>
+          </div>
+
+          <form class="tbc-form">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required />
+            </div>
+
+            <div class="form-group">
+              <label for="puesto">¿Cuál es tu puesto de trabajo?</label>
+              <input type="text" id="puesto" name="puesto" required />
+            </div>
+            <div class="form-group">
+              <label for="sucursal">¿Cuál es tu sucursal de preferencia?</label>
+              <select id="sucursal" name="sucursal" required>
+                <option value="">Seleccionar sucursal</option>
+                <option value="palermo">Palermo</option>
+                <option value="belgrano">Belgrano</option>
+                <option value="san-telmo">San Telmo</option>
+                <option value="recoleta">Recoleta</option>
+                <option value="microcentro">Microcentro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cv">Adjuntar CV</label>
+              <input
+                type="file"
+                id="cv"
+                name="cv"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Contanos por qué querés trabajar en TDC..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">ENVIAR</button>
+          </form>
+        </div>
       </div>
     </main>
 
@@ -62,6 +125,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
+          <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+
           <div class="footer-section">
             <h4>CONTENIDOS</h4>
             <ul>
@@ -82,17 +147,19 @@
           </div>
 
           <div class="footer-section">
-            <h4>CONECTATE CON NOSOTROS</h4>
-            <div class="social-links">
-              <a href="#" class="social-link">Facebook</a>
-              <a href="#" class="social-link">Instagram</a>
-            </div>
+            <h4>¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h4>
+            <form class="newsletter-form">
+              <input type="text" placeholder="Tu nombre" />
+              <input type="email" placeholder="Tu email" />
+              <button type="button" class="btn-secondary">SUSCRIBIRME</button>
+            </form>
           </div>
         </div>
 
         <div class="footer-bottom">
           <p>
-            © Copyright 2021 Tienda de café - Todos los derechos reservados.
+            © Copyright 2025 Tienda de café - IFTS16 - Todos los derechos
+            reservados.
           </p>
           <p>
             Todos los logos, productos, marcas y nombres aquí utilizados son

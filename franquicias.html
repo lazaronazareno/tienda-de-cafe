@@ -13,34 +13,31 @@
     <!-- Header -->
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <a href="index.html" class="nav-link">
-            <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
-          </a>
+        <input type="checkbox" id="nav-check" />
+        <div class="nav-header">
+          <div class="logo">
+            <a href="index.html" class="nav-link active">
+              <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+            </a>
+          </div>
         </div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li>
-              <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
-            </li>
-            <li><a href="tutoriales.html" class="nav-link">Tutoriales</a></li>
-            <li><a href="locales.html" class="nav-link">Locales</a></li>
-            <li><a href="menu.html" class="nav-link">Nuestro Menú</a></li>
-            <li>
-              <a href="trabaja-con-nosotros.html" class="nav-link"
-                >Trabajá en TDC</a
-              >
-            </li>
-            <li>
-              <a href="franquicias.html" class="nav-link active">Franquicias</a>
-            </li>
-            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div class="nav-links">
+          <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
+          <a href="tutoriales.html" class="nav-link">Tutoriales</a>
+          <a href="locales.html" class="nav-link">Locales</a>
+          <a href="menu.html" class="nav-link">Nuestro Menú</a>
+          <a href="trabaja-con-nosotros.html" class="nav-link"
+            >Trabajá en TDC</a
+          >
+          <a href="franquicias.html" class="nav-link">Franquicias</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
         </div>
       </div>
     </header>
@@ -104,22 +101,22 @@
             <div class="form-row-2">
               <div class="form-group">
                 <label for="nombre">Nombre *</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" required />
               </div>
               <div class="form-group">
                 <label for="apellido">Apellido *</label>
-                <input type="text" id="apellido" name="apellido" required>
+                <input type="text" id="apellido" name="apellido" required />
               </div>
             </div>
 
             <div class="form-row-2">
               <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required />
               </div>
               <div class="form-group">
                 <label for="telefono">Teléfono *</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="telefono" required />
               </div>
             </div>
 
@@ -127,7 +124,7 @@
             <div class="form-row-2-1">
               <div class="form-group">
                 <label for="ciudad">Ciudad *</label>
-                <input type="text" id="ciudad" name="ciudad" required>
+                <input type="text" id="ciudad" name="ciudad" required />
               </div>
               <div class="form-group">
                 <label for="provincia">Provincia *</label>
@@ -153,7 +150,9 @@
                   <option value="san-luis">San Luis</option>
                   <option value="santa-cruz">Santa Cruz</option>
                   <option value="santa-fe">Santa Fe</option>
-                  <option value="santiago-del-estero">Santiago del Estero</option>
+                  <option value="santiago-del-estero">
+                    Santiago del Estero
+                  </option>
                   <option value="tierra-del-fuego">Tierra del Fuego</option>
                   <option value="tucuman">Tucumán</option>
                 </select>
@@ -162,7 +161,9 @@
 
             <!-- Información del Negocio -->
             <div class="form-group">
-              <label for="experiencia">Experiencia en el rubro gastronómico</label>
+              <label for="experiencia"
+                >Experiencia en el rubro gastronómico</label
+              >
               <select id="experiencia" name="experiencia">
                 <option value="">Seleccionar...</option>
                 <option value="sin-experiencia">Sin experiencia</option>
@@ -222,7 +223,12 @@
 
             <div class="form-group">
               <label for="comentarios">Comentarios adicionales</label>
-              <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos más sobre tus planes, preguntas específicas o cualquier información adicional que consideres relevante..."></textarea>
+              <textarea
+                id="comentarios"
+                name="comentarios"
+                rows="4"
+                placeholder="Cuéntanos más sobre tus planes, preguntas específicas o cualquier información adicional que consideres relevante..."
+              ></textarea>
             </div>
 
             <!-- Términos y condiciones -->
@@ -259,40 +265,44 @@
     </div>
 
     <script>
-      document.getElementById('franquicia-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Simular envío del formulario
-        setTimeout(function() {
-          document.getElementById('modal-confirmacion').style.display = 'flex';
-          document.body.style.overflow = 'hidden';
-        }, 500);
-      });
+      document
+        .getElementById("franquicia-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault()
+
+          // Simular envío del formulario
+          setTimeout(function () {
+            document.getElementById("modal-confirmacion").style.display = "flex"
+            document.body.style.overflow = "hidden"
+          }, 500)
+        })
 
       function cerrarModal() {
-        document.getElementById('modal-confirmacion').style.display = 'none';
-        document.body.style.overflow = 'auto';
-        
+        document.getElementById("modal-confirmacion").style.display = "none"
+        document.body.style.overflow = "auto"
+
         // Resetear formulario
-        document.getElementById('franquicia-form').reset();
-        
+        document.getElementById("franquicia-form").reset()
+
         // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" })
       }
 
       // Cerrar modal con ESC
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          cerrarModal();
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          cerrarModal()
         }
-      });
+      })
 
       // Cerrar modal clickeando fuera
-      document.getElementById('modal-confirmacion').addEventListener('click', function(e) {
-        if (e.target === this) {
-          cerrarModal();
-        }
-      });
+      document
+        .getElementById("modal-confirmacion")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            cerrarModal()
+          }
+        })
     </script>
     </main>
 
@@ -300,6 +310,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
+          <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+
           <div class="footer-section">
             <h4>CONTENIDOS</h4>
             <ul>
@@ -320,17 +332,19 @@
           </div>
 
           <div class="footer-section">
-            <h4>CONECTATE CON NOSOTROS</h4>
-            <div class="social-links">
-              <a href="#" class="social-link">Facebook</a>
-              <a href="#" class="social-link">Instagram</a>
-            </div>
+            <h4>¡SUSCRIBITE PARA RECIBIR DESCUENTOS Y NOVEDADES EXCLUSIVAS!</h4>
+            <form class="newsletter-form">
+              <input type="text" placeholder="Tu nombre" />
+              <input type="email" placeholder="Tu email" />
+              <button type="button" class="btn-secondary">SUSCRIBIRME</button>
+            </form>
           </div>
         </div>
 
         <div class="footer-bottom">
           <p>
-            © Copyright 2021 Tienda de café - Todos los derechos reservados.
+            © Copyright 2025 Tienda de café - IFTS16 - Todos los derechos
+            reservados.
           </p>
           <p>
             Todos los logos, productos, marcas y nombres aquí utilizados son
