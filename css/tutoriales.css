@@ -1,0 +1,834 @@
+/* Tutoriales */
+
+.tutoriales-main {
+    margin-top: 80px;
+    background: linear-gradient(135deg, #f8f4f0 0%, #fff 100%);
+}
+
+.tutoriales-hero {
+    position: relative;
+    height: 40vh;
+    background: url('../img-menu/tutoriales-hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.tutoriales-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.tutoriales-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.tutoriales-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Edu VIC WA NT Hand Pre', cursive;
+    letter-spacing: 3px;
+    word-spacing: 15px;
+}
+
+.tutoriales-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Edu VIC WA NT Hand Pre', cursive;
+    letter-spacing: 2px;
+}
+
+/* Intro Section */
+.tutoriales-intro {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.intro-tips {
+    margin: 40px 0;
+    font-style: italic;
+    color: #777;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.intro-highlight {
+    font-weight: bold;
+    color: #8b4513;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    font-family: 'Playwrite GB J', cursive;
+}
+
+/* Methods Grid Section */
+.tutoriales-methods {
+    padding: 40px 0 80px;
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.method-card {
+    position: relative;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.method-card:nth-child(odd) {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.method-card:nth-child(even) {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.method-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.method-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    background-color: #f0f0f0;
+}
+
+.method-card:hover .method-image {
+    transform: scale(1.1);
+}
+
+.method-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+.method-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Amarante', cursive;
+    letter-spacing: 1px;
+}
+
+.method-btn {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+    font-family: 'Amarante', cursive;
+}
+
+.method-btn:hover {
+    background-color: #654321;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Placeholder styling para imágenes sin cargar */
+.method-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Amarante', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== MODAL STYLES CON <dialog> NATIVO ===== */
+.tutorial-modal {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    max-width: 90vw;
+    max-height: 95vh;
+    width: 900px;
+    background: transparent;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.4s ease-out;
+    /* Máximo z-index y aislamiento completo */
+    z-index: 999999;
+    isolation: isolate;
+    /* Crear nuevo contexto de apilamiento */
+    transform: translateZ(0);
+    /* Asegurar que esté sobre todo */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+    margin: 0;
+    /* Forzar contexto de apilamiento independiente */
+    will-change: transform;
+    contain: layout style paint;
+}
+
+.tutorial-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease-out;
+    /* Máximo z-index para el backdrop también */
+    z-index: 999998;
+    /* Crear barrera visual completa */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Asegurar que el backdrop cubra absolutamente todo */
+    inset: 0;
+    z-index: 999998 !important;
+}
+
+.tutorial-modal[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevenir interferencia de otros elementos cuando el modal está abierto */
+body:has(.tutorial-modal[open]) {
+    overflow: hidden;
+}
+
+/* Asegurar que el footer y otros elementos no interfieran */
+body:has(.tutorial-modal[open]) .footer,
+body:has(.tutorial-modal[open]) .header,
+body:has(.tutorial-modal[open]) main {
+    z-index: 1;
+    position: relative;
+}
+
+/* Fallback para navegadores que no soportan :has() */
+@supports not (selector(:has(*))) {
+    body.modal-open {
+        overflow: hidden;
+    }
+    
+    body.modal-open .footer,
+    body.modal-open .header,
+    body.modal-open main {
+        z-index: 1;
+        position: relative;
+    }
+}
+
+/* Clase para screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mejoras en las cards para accesibilidad */
+.method-card {
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    outline: 3px solid transparent;
+    outline-offset: 2px;
+}
+
+.method-card:hover,
+.method-card:focus {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    outline-color: #FFD700;
+}
+
+.method-card:focus-visible {
+    outline-color: #FFD700;
+    outline-style: solid;
+}
+
+/* Botones mejorados */
+.method-btn {
+    background: #FFD700;
+    color: #8B4513;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.method-btn:hover,
+.method-btn:focus {
+    background: #FFF700;
+    transform: scale(1.05);
+    outline-color: #8B4513;
+}
+
+/* Mejoras semánticas para la receta */
+.receta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.receta-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.receta-item dt {
+    font-weight: bold;
+    color: #8B4513;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.receta-item dd {
+    font-size: 1.2rem;
+    color: #8B4513;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Lista de pasos semántica */
+.pasos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.paso-item {
+    margin-bottom: 40px;
+    list-style: none;
+}
+
+.paso-separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8B4513, transparent);
+    margin: 30px 0;
+}
+
+/* Figura semántica para imágenes */
+.paso-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 0;
+}
+
+/* Grid moderno para methods */
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.tutorial-modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    width: 90%;
+    max-width: 900px;
+    max-height: 95vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.4s ease-out;
+}
+
+.tutorial-modal-header {
+    position: relative;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    padding: 10px 20px;
+}
+
+.tutorial-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.tutorial-close:hover {
+    transform: scale(1.1);
+    color: #FFD700;
+}
+
+.tutorial-modal-body {
+    max-height: calc(95vh - 70px);
+    overflow-y: auto;
+    padding: 0;
+    width: 100%;
+}
+
+/* Hero del modal */
+.modal-hero {
+    height: 300px;
+    background: linear-gradient(rgba(139, 69, 19, 0.7), rgba(139, 69, 19, 0.7)), 
+                url('img-menu/coffee-beans-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* Sección de receta */
+.receta-section {
+    padding: 40px;
+    background: #f8f8f8;
+    border-bottom: 3px solid #8B4513;
+}
+
+.receta-section h2 {
+    color: #8B4513;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.receta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.receta-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.receta-item:hover {
+    transform: translateY(-5px);
+}
+
+.receta-label {
+    display: block;
+    font-weight: bold;
+    color: #8B4513;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.receta-item span:last-child {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Sección de pasos */
+.pasos-section {
+    padding: 40px;
+}
+
+.pasos-section h2 {
+    color: #8B4513;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.paso-item {
+    margin-bottom: 40px;
+}
+
+.paso-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.paso-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.paso-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.paso-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.paso-text {
+    flex: 1;
+}
+
+.paso-text h3 {
+    color: #8B4513;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.paso-text p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.paso-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8B4513, transparent);
+    margin: 30px 0;
+}
+
+/* Mensaje final */
+.mensaje-final {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.mensaje-final p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: #FFD700;
+    color: #8B4513;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    background: #FFF700;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animaciones similares a menu.css */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tutoriales-title {
+        font-size: 2.5rem;
+        word-spacing: 10px;
+    }
+    
+    .tutoriales-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .methods-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .method-card {
+        height: 300px;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .tutorial-modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .modal-hero {
+        height: 200px;
+    }
+    
+    .receta-section,
+    .pasos-section {
+        padding: 20px;
+    }
+    
+    .paso-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .paso-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .receta-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutoriales-hero {
+        height: 30vh;
+    }
+    
+    .tutoriales-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .method-title {
+        font-size: 1.5rem;
+    }
+    
+    .method-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Scroll personalizado para el modal */
+.tutorial-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tutorial-modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.tutorial-modal-body::-webkit-scrollbar-thumb {
+    background: #8B4513;
+    border-radius: 10px;
+}
+
+.tutorial-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #A0522D;
+}
+
+/* Focus visible mejorado */
+*:focus-visible {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Reduce motion para usuarios sensibles */
+@media (prefers-reduced-motion: reduce) {
+    .tutorial-modal,
+    .method-card,
+    .paso-item,
+    .btn-primary {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .method-card {
+        border: 2px solid currentColor;
+    }
+    
+    .tutorial-modal::backdrop {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .tutorial-modal-content {
+        background: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .receta-item {
+        background: #2a2a2a;
+        color: #ffffff;
+    }
+    
+    .receta-item dt {
+        color: #FFD700;
+    }
+    
+    .paso-text h3 {
+        color: #FFD700;
+    }
+    
+    .paso-text p {
+        color: #cccccc;
+    }
+}

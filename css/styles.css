@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Amarante&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Oranienbaum&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Sevillana&family=Updock&family=Dancing+Script:wght@400..700&family=Pacifico&family=Kalam:wght@300;400;700&family=Caveat:wght@400..700&family=Satisfy&display=swap");
+
 /* Reset y estilos base */
 * {
   margin: 0;
@@ -6,6 +8,7 @@
 }
 
 body {
+  font-family: "Oranienbaum Static", "Oranienbaum", "Arial", sans-serif;
   font-family: "Funnel Sans", sans-serif !important;
   font-optical-sizing: auto;
   font-style: normal;
@@ -48,6 +51,93 @@ body {
 .btn-secondary:hover {
   border: 2px solid #c7a17a;
   color: white;
+}
+
+/* Botones adicionales comunes */
+.btn-directions,
+.btn-call {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-directions {
+  background-color: #8b4513;
+  color: white;
+}
+
+.btn-directions:hover {
+  background-color: #654321;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-call {
+  background-color: transparent;
+  color: #8b4513;
+  border: 2px solid #8b4513;
+}
+
+.btn-call:hover {
+  background-color: #8b4513;
+  color: white;
+  text-decoration: none;
+}
+
+.search-btn {
+  background-color: #8b4513;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.search-btn:hover {
+  background-color: #654321;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-enviar {
+  background-color: #8b4513;
+  color: white;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-enviar:hover {
+  background-color: #654321;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+  color: white;
+  text-decoration: none;
 }
 
 /* Header */
@@ -249,6 +339,91 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Slider Navigation */
+.slider-nav {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-nav input[type="radio"] {
+  display: none;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 15px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-nav input[type="radio"]:checked + .slider-dots .dot,
+.slider-nav
+  input[type="radio"]:nth-child(1):checked
+  ~ .slider-dots
+  .dot:nth-child(1),
+.slider-nav
+  input[type="radio"]:nth-child(2):checked
+  ~ .slider-dots
+  .dot:nth-child(2),
+.slider-nav
+  input[type="radio"]:nth-child(3):checked
+  ~ .slider-dots
+  .dot:nth-child(3) {
+  background-color: #8b4513;
+  transform: scale(1.2);
+}
+
+/* CSS para controlar las slides */
+#slide1:checked ~ .hero-slider .slide:nth-child(1),
+#slide2:checked ~ .hero-slider .slide:nth-child(2),
+#slide3:checked ~ .hero-slider .slide:nth-child(3) {
+  opacity: 1;
+}
+
+/* Auto-play del slider */
+.hero {
+  animation: autoSlide 12s infinite;
+}
+
+@keyframes autoSlide {
+  0%,
+  25% {
+    /* Slide 1 activo */
+  }
+
+  25.01%,
+  50% {
+    /* Transición al slide 2 */
+  }
+
+  50.01%,
+  75% {
+    /* Slide 2 activo */
+  }
+
+  75.01%,
+  100% {
+    /* Slide 3 activo */
+  }
+}
+
+/* Animación de los dots */
+#slide1:checked ~ .slider-dots .dot:nth-child(1),
+#slide2:checked ~ .slider-dots .dot:nth-child(2),
+#slide3:checked ~ .slider-dots .dot:nth-child(3) {
+  background-color: #8b4513;
+  transform: scale(1.2);
   object-position: center right;
 }
 
@@ -596,16 +771,25 @@ body {
   width: fit-content;
 }
 
-.footer-bottom {
-  border-top: 1px solid #555;
-  padding-top: 20px;
-  text-align: center;
-  color: #999;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.footer-bottom p {
-  margin-bottom: 5px;
-  font-size: 0.9rem;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8b4513;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
 }
 
 /* Responsive Design */

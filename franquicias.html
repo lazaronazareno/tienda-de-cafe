@@ -5,17 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Franquicias - Tienda de Café</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* Estilos específicos para franquicias responsive */
+      @media (max-width: 768px) {
+        .franquicias-hero h1 {
+          font-size: 2.5rem !important;
+        }
+        
+        .franquicias-hero p {
+          font-size: 1.1rem !important;
+        }
+        
+        #formulario-franquicia .form-container-base {
+          padding: 30px 20px !important;
+        }
+        
+        #formulario-franquicia div[style*="grid-template-columns: 1fr 1fr"],
+        #formulario-franquicia div[style*="grid-template-columns: 2fr 1fr"] {
+          grid-template-columns: 1fr !important;
+        }
+        
+        #formulario-franquicia div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      
+      /* Mejoras de accesibilidad */
+      input:focus, select:focus, textarea:focus {
+        outline: 2px solid #8b4513 !important;
+        outline-offset: 2px !important;
+      }
+      
+      /* Hover effects para botones */
+      .btn-primary:hover {
+        background-color: #654321 !important;
+        transform: translateY(-2px) !important;
+      }
+      
+      button[onclick="cerrarModal()"]:hover {
+        background-color: #654321 !important;
+        transform: translateY(-2px) !important;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="logo">
-          <img src="images/logo.png" alt="Tienda de Café" />
+          <a href="index.html" class="nav-link">
+            <img src="images/tienda-de-cafe.png" alt="Tienda de Café" />
+          </a>
         </div>
         <nav class="nav">
           <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">Inicio</a></li>
             <li>
               <a href="nuestro-cafe.html" class="nav-link">Nuestro Café</a>
             </li>
@@ -41,23 +84,304 @@
       </div>
     </header>
 
-    <!-- Contenido principal (placeholder) -->
-    <main
-      style="
-        margin-top: 80px;
-        min-height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
+    <!-- Hero Section -->
+    <section class="franquicias-hero" style="
+      background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(160, 82, 45, 0.9)),
+                  url('images/hero-locales.jpg') center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 80px;
+    ">
       <div class="container">
-        <h1 style="text-align: center; color: #8b4513">Franquicias</h1>
-        <p style="text-align: center; color: #666; margin-top: 20px">
-          Contenido próximamente...
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px; font-weight: bold;">
+          Únete a Nuestra Familia de Franquicias
+        </h1>
+        <p style="font-size: 1.3rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Descubre la oportunidad de negocio perfecta con nuestra reconocida marca de café. 
+          Te acompañamos en cada paso del proceso.
         </p>
+        <a href="#formulario-franquicia" class="btn-primary" style="
+          display: inline-block;
+          padding: 15px 40px;
+          background-color: #8b4513;
+          color: white;
+          text-decoration: none;
+          border-radius: 30px;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: all 0.3s ease;
+        ">Solicitar Información</a>
       </div>
-    </main>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section style="padding: 80px 0; background-color: #f9f9f9;">
+      <div class="container">
+        <h2 class="section-title">¿Por Qué Elegir Nuestra Franquicia?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px;">
+          <div class="card-base" style="text-align: center;">
+            <div style="font-size: 3rem; color: #8b4513; margin-bottom: 20px;">🏪</div>
+            <h3 style="color: #8b4513; margin-bottom: 15px; font-size: 1.3rem;">Marca Reconocida</h3>
+            <p style="color: #666; line-height: 1.6;">
+              Únete a una marca consolidada con años de experiencia en el mercado del café premium.
+            </p>
+          </div>
+          <div class="card-base" style="text-align: center;">
+            <div style="font-size: 3rem; color: #8b4513; margin-bottom: 20px;">📚</div>
+            <h3 style="color: #8b4513; margin-bottom: 15px; font-size: 1.3rem;">Capacitación Completa</h3>
+            <p style="color: #666; line-height: 1.6;">
+              Te brindamos toda la formación necesaria para operar tu franquicia con éxito.
+            </p>
+          </div>
+          <div class="card-base" style="text-align: center;">
+            <div style="font-size: 3rem; color: #8b4513; margin-bottom: 20px;">🤝</div>
+            <h3 style="color: #8b4513; margin-bottom: 15px; font-size: 1.3rem;">Soporte Continuo</h3>
+            <p style="color: #666; line-height: 1.6;">
+              Acompañamiento constante en marketing, operaciones y desarrollo de negocio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario Section -->
+    <section id="formulario-franquicia" style="padding: 80px 0; background-color: white;">
+      <div class="container">
+        <div class="form-container-base" style="max-width: 800px; margin: 0 auto;">
+          <h2 style="text-align: center; color: #8b4513; margin-bottom: 10px; font-size: 2.2rem;">
+            Solicita Información sobre Franquicias
+          </h2>
+          <p style="text-align: center; color: #666; margin-bottom: 40px; font-size: 1.1rem;">
+            Completa el formulario y nos pondremos en contacto contigo en las próximas 24 horas.
+          </p>
+          
+          <form id="franquicia-form" style="display: grid; gap: 25px;">
+            <!-- Información Personal -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido *</label>
+                <input type="text" id="apellido" name="apellido" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required>
+              </div>
+            </div>
+
+            <!-- Información de Ubicación -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label for="ciudad">Ciudad *</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+              </div>
+              <div class="form-group">
+                <label for="provincia">Provincia *</label>
+                <select id="provincia" name="provincia" required>
+                  <option value="">Seleccionar...</option>
+                  <option value="buenos-aires">Buenos Aires</option>
+                  <option value="catamarca">Catamarca</option>
+                  <option value="chaco">Chaco</option>
+                  <option value="chubut">Chubut</option>
+                  <option value="cordoba">Córdoba</option>
+                  <option value="corrientes">Corrientes</option>
+                  <option value="entre-rios">Entre Ríos</option>
+                  <option value="formosa">Formosa</option>
+                  <option value="jujuy">Jujuy</option>
+                  <option value="la-pampa">La Pampa</option>
+                  <option value="la-rioja">La Rioja</option>
+                  <option value="mendoza">Mendoza</option>
+                  <option value="misiones">Misiones</option>
+                  <option value="neuquen">Neuquén</option>
+                  <option value="rio-negro">Río Negro</option>
+                  <option value="salta">Salta</option>
+                  <option value="san-juan">San Juan</option>
+                  <option value="san-luis">San Luis</option>
+                  <option value="santa-cruz">Santa Cruz</option>
+                  <option value="santa-fe">Santa Fe</option>
+                  <option value="santiago-del-estero">Santiago del Estero</option>
+                  <option value="tierra-del-fuego">Tierra del Fuego</option>
+                  <option value="tucuman">Tucumán</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Información del Negocio -->
+            <div class="form-group">
+              <label for="experiencia">Experiencia en el rubro gastronómico</label>
+              <select id="experiencia" name="experiencia">
+                <option value="">Seleccionar...</option>
+                <option value="sin-experiencia">Sin experiencia</option>
+                <option value="1-3-anos">1-3 años</option>
+                <option value="3-5-anos">3-5 años</option>
+                <option value="5-10-anos">5-10 años</option>
+                <option value="mas-10-anos">Más de 10 años</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label for="inversion">Capital de inversión disponible</label>
+                <select id="inversion" name="inversion">
+                  <option value="">Seleccionar...</option>
+                  <option value="50-100k">$50,000 - $100,000</option>
+                  <option value="100-200k">$100,000 - $200,000</option>
+                  <option value="200-500k">$200,000 - $500,000</option>
+                  <option value="500k-mas">Más de $500,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="timeline">¿Cuándo te gustaría iniciar?</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Seleccionar...</option>
+                  <option value="inmediato">Inmediatamente</option>
+                  <option value="1-3-meses">1-3 meses</option>
+                  <option value="3-6-meses">3-6 meses</option>
+                  <option value="6-12-meses">6-12 meses</option>
+                  <option value="mas-12-meses">Más de 12 meses</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Preferencias -->
+            <div class="form-group">
+              <label>Tipo de local preferido</label>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 10px;">
+                <label style="display: flex; align-items: center; gap: 10px; font-weight: normal; cursor: pointer;">
+                  <input type="checkbox" name="tipo_local[]" value="centro-comercial" style="width: auto;">
+                  Centro comercial
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; font-weight: normal; cursor: pointer;">
+                  <input type="checkbox" name="tipo_local[]" value="calle-comercial" style="width: auto;">
+                  Calle comercial
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; font-weight: normal; cursor: pointer;">
+                  <input type="checkbox" name="tipo_local[]" value="zona-oficinas" style="width: auto;">
+                  Zona de oficinas
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; font-weight: normal; cursor: pointer;">
+                  <input type="checkbox" name="tipo_local[]" value="universidad" style="width: auto;">
+                  Cerca de universidad
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comentarios">Comentarios adicionales</label>
+              <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos más sobre tus planes, preguntas específicas o cualquier información adicional que consideres relevante..."></textarea>
+            </div>
+
+            <!-- Términos y condiciones -->
+            <div style="margin: 20px 0;">
+              <label style="display: flex; align-items: flex-start; gap: 10px; font-weight: normal; cursor: pointer; line-height: 1.5;">
+                <input type="checkbox" id="terminos" name="terminos" required style="width: auto; margin-top: 2px;">
+                <span style="font-size: 0.9rem; color: #666;">
+                  Acepto los <a href="#" style="color: #8b4513; text-decoration: underline;">términos y condiciones</a> 
+                  y autorizo el tratamiento de mis datos personales para recibir información comercial sobre franquicias.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-enviar" style="margin-top: 10px;">
+              Enviar Solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div id="modal-confirmacion" style="
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    ">
+      <div style="
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 400px;
+        margin: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      ">
+        <div style="font-size: 3rem; color: #4CAF50; margin-bottom: 20px;">✓</div>
+        <h3 style="color: #8b4513; margin-bottom: 15px; font-size: 1.5rem;">
+          ¡Solicitud Enviada!
+        </h3>
+        <p style="color: #666; margin-bottom: 25px; line-height: 1.5;">
+          Gracias por tu interés en nuestras franquicias. Nos pondremos en contacto contigo en las próximas 24 horas.
+        </p>
+        <button onclick="cerrarModal()" style="
+          background-color: #8b4513;
+          color: white;
+          padding: 12px 30px;
+          border: none;
+          border-radius: 25px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        ">Continuar</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('franquicia-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simular envío del formulario
+        setTimeout(function() {
+          document.getElementById('modal-confirmacion').style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }, 500);
+      });
+
+      function cerrarModal() {
+        document.getElementById('modal-confirmacion').style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Resetear formulario
+        document.getElementById('franquicia-form').reset();
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Cerrar modal con ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          cerrarModal();
+        }
+      });
+
+      // Cerrar modal clickeando fuera
+      document.getElementById('modal-confirmacion').addEventListener('click', function(e) {
+        if (e.target === this) {
+          cerrarModal();
+        }
+      });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -66,7 +390,6 @@
           <div class="footer-section">
             <h4>CONTENIDOS</h4>
             <ul>
-              <li><a href="index.html">Inicio</a></li>
               <li><a href="nuestro-cafe.html">Nuestro Café</a></li>
               <li><a href="locales.html">Locales</a></li>
               <li><a href="menu.html">Nuestro menú</a></li>

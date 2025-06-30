@@ -1,0 +1,463 @@
+/* Franquicias Styles */
+
+/* Main container */
+.franquicias-main {
+  margin-top: 80px;
+}
+
+/* Hero Section */
+.franquicias-hero {
+  background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.franquicias-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img-menu/heroSandiwch.png') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.franquicias-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.franquicias-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.franquicias-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Intro Section */
+.franquicias-intro {
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+
+.franquicias-intro .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.intro-text strong {
+  color: #8b4513;
+  font-weight: 600;
+}
+
+.intro-highlight {
+  background-color: #f8f4e6;
+  padding: 25px;
+  border-left: 5px solid #d4af37;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #8b4513;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Form Section */
+.franquicias-form-section {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form-title {
+  font-size: 2.2rem;
+  color: #8b4513;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.franquicia-form {
+  background-color: #fafafa;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8b4513;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: #8b4513;
+  border-color: #8b4513;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.checkbox-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Success Modal - siguiendo el patrón de tutoriales */
+.success-modal {
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  max-width: 90vw;
+  max-height: 80vh;
+  width: 500px;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease-out;
+  z-index: 999999;
+  isolation: isolate;
+  transform: translateZ(0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  margin: 0;
+}
+
+.success-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease-out;
+  z-index: 999998;
+}
+
+.success-modal[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.success-modal-content {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.success-modal-header {
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.success-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.success-close:hover {
+  transform: scale(1.1);
+  color: #FFD700;
+}
+
+.success-modal-body {
+  padding: 40px;
+  text-align: center;
+  background: white;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  animation: bounce 0.6s ease-out;
+}
+
+.success-modal-body h2 {
+  color: #8B4513;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.success-modal-body p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.success-btn {
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.success-btn:hover {
+  background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+/* Animaciones */
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-50px) scale(0.9) translateZ(0);
+  }
+  to { 
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0) scale(1) translateZ(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .franquicias-title {
+    font-size: 2.5rem;
+  }
+
+  .franquicias-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .franquicias-hero {
+    padding: 60px 0;
+  }
+
+  .franquicias-intro,
+  .franquicias-form-section {
+    padding: 40px 0;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .franquicia-form {
+    padding: 25px;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .intro-highlight {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .franquicias-title {
+    font-size: 2rem;
+  }
+
+  .franquicias-subtitle {
+    font-size: 1rem;
+  }
+
+  .franquicia-form {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+  }
+
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+
+  .success-modal {
+    width: 95%;
+  }
+  
+  .success-modal-body {
+    padding: 25px;
+  }
+  
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+  
+  .success-modal-body h2 {
+    font-size: 1.5rem;
+  }
+  
+  .success-modal-body p {
+    font-size: 1rem;
+  }
+}
