@@ -300,50 +300,55 @@ body {
 }
 
 /* Efecto hover para cambiar imagen usando CSS específico */
-.producto-card img {
+.producto-card-image {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1;
+  overflow: hidden;
+}
+
+.producto-card img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: transform 0.5s ease;
+}
+
+.producto-card:hover img {
+  transform: scale(1.2);
+  transition: opacity 2s ease, transform 2s ease;
 }
 
 /* Hover effects para productos específicos */
 .producto-card:hover img[alt="Café Brasil"] {
   content: url("../images/products_Brasil_frente.jpg");
-  transform: scale(1.05);
 }
 
 .producto-card:hover img[alt="Café Barista"],
 .producto-card:hover img[alt="Cápsulas Barista"] {
   content: url("../images/products_Barista_frente.jpg");
-  transform: scale(1.05);
 }
 
 .producto-card:hover img[alt="Café Minka"],
 .producto-card:hover img[alt="Cápsulas Minka"] {
   content: url("../images/products_minka_frente.jpg");
-  transform: scale(1.05);
 }
 
 .producto-card:hover img[alt="Café Colombia"],
 .producto-card:hover img[alt="Cápsulas Colombia"] {
   content: url("../images/products_Colombia_frente.jpg");
-  transform: scale(1.05);
 }
 
 .producto-card:hover img[alt="Café Scegliere"],
 .producto-card:hover img[alt="Cápsulas Scegliere"] {
   content: url("../images/products_scegliere_frente.jpg");
-  transform: scale(1.05);
 }
 
 .producto-card:hover img[alt="Café Descafeinado"] {
   content: url("../images/products_descaf_frente.jpg");
-  transform: scale(1.05);
 }
 
 .producto-card h3 {
