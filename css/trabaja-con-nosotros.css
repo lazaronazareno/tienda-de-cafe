@@ -6,3 +6,32 @@
   justify-content: center;
   padding: 2rem;
 }
+
+.tbc-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tbc-form .form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 45%;
+}
+
+.tbc-form input,
+.tbc-form select {
+  border-radius: 0;
+}
+
+.form-group:nth-child(8) {
+  min-width: 100%;
+}
+
+.tbc-form textarea {
+  height: 10rem;
+}
+
+.tbc-form button {
+  background: #c7a17a;
+}
