@@ -279,6 +279,8 @@ h6 {
   gap: 10px;
 }
 
+
+
 .slider-controls > a {
   display: inline-block;
   width: 2.5rem;
@@ -462,13 +464,14 @@ h6 {
 }
 
 .productos-slide {
+  justify-content: center;
   scroll-snap-align: start;
   flex-shrink: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
-  height: 40vh !important;
+  height: 50vh !important;
   padding: 0 !important;
 }
 
@@ -650,6 +653,7 @@ h6 {
 }
 
 .cafe-item {
+  height: 40vh;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -903,5 +907,9 @@ h6 {
 
   .footer-content img {
     margin-right: 100%;
+  }
+
+  .slider-controls {
+    position: static;
   }
 }
