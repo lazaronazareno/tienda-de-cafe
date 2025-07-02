@@ -126,6 +126,11 @@ body:not(.locales-page) .locales-main {
   margin-bottom: 80px;
 }
 
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
 .locales-grid .section-title {
   color: #cd853f;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -471,10 +476,6 @@ body:not(.locales-page) .locales-main {
 }
 
 @media (max-width: 480px) {
-  .locales-hero {
-    height: 25vh;
-  }
-
   .locales-title {
     font-size: 2rem;
   }

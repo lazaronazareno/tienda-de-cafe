@@ -191,7 +191,9 @@
 
 /* Checkbox Styles */
 .checkbox-group {
+  margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 12px;
 }
@@ -631,7 +633,7 @@
 
 @media (max-width: 480px) {
   .franquicias-hero {
-    height: 25vh;
+    height: 60vh;
   }
 
   .franquicias-title {
@@ -646,12 +648,17 @@
     padding: 20px;
   }
 
+  .form-row-2,
+  .form-row-2-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .form-group input,
   .form-group select,
   .form-group textarea {
     padding: 10px 12px;
   }
-
 
   .success-modal {
     width: 95%;

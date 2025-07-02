@@ -404,4 +404,13 @@
   .menu-subtitle {
     font-size: 0.9rem;
   }
+
+  .menu-pdf-section {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .menu-pdf-container {
+    padding: 40px 20px;
+  }
 }
